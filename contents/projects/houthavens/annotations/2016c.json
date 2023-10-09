@@ -5,7 +5,7 @@
   ],
   "items": [
     {
-      "id": "7c330e2a5b60bd7d",
+      "id": "9ed7a191537bed77",
       "type": "Annotation",
       "@context": [
         "http://www.w3.org/ns/anno.jsonld",
@@ -15,16 +15,16 @@
       "motivation": "georeferencing",
       "target": {
         "type": "Image",
-        "source": "https://images.memorix.nl/ams/iiif/25b9645c-65f6-f3aa-3ecf-3b80626f3c02/full/full/0/default.jpg",
+        "source": "https://dlc.services/iiif-img/7/34/86ee90c7f1db2846e8991987b5959dce/full/full/0/default.jpg",
         "service": [
           {
-            "@id": "https://images.memorix.nl/ams/iiif/25b9645c-65f6-f3aa-3ecf-3b80626f3c02",
+            "@id": "https://dlc.services/iiif-img/7/34/86ee90c7f1db2846e8991987b5959dce",
             "type": "ImageService2"
           }
         ],
         "selector": {
           "type": "SvgSelector",
-          "value": "<svg width=\"9762\" height=\"7866\"><polygon points=\"0,0 0,7866 9762,7866 9762,0\" /></svg>"
+          "value": "<svg width=\"1654\" height=\"1166\"><polygon points=\"245,364 249,739 388,738 386,753 449,754 450,738 598,739 597,516 259,364\" /></svg>"
         }
       },
       "body": {
@@ -39,15 +39,15 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                3964,
-                6620
+                592,
+                521
               ]
             },
             "geometry": {
               "type": "Point",
               "coordinates": [
-                4.8829549,
-                52.3833017
+                4.8793853,
+                52.3947177
               ]
             }
           },
@@ -55,15 +55,15 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4411,
-                7035
+                253,
+                371
               ]
             },
             "geometry": {
               "type": "Point",
               "coordinates": [
-                4.8884922,
-                52.3802025
+                4.8794708,
+                52.3945269
               ]
             }
           },
@@ -71,15 +71,15 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4250,
-                7323
+                591,
+                728
               ]
             },
             "geometry": {
               "type": "Point",
               "coordinates": [
-                4.8865622,
-                52.3780542
+                4.8795251,
+                52.3947896
               ]
             }
           },
@@ -87,63 +87,15 @@
             "type": "Feature",
             "properties": {
               "pixelCoords": [
-                4937,
-                7099
+                256,
+                730
               ]
             },
             "geometry": {
               "type": "Point",
               "coordinates": [
-                4.8950253,
-                52.3797396
-              ]
-            }
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "pixelCoords": [
-                4817,
-                7223
-              ]
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                4.8936,
-                52.3787755
-              ]
-            }
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "pixelCoords": [
-                4119,
-                5996
-              ]
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                4.8848399,
-                52.3879898
-              ]
-            }
-          },
-          {
-            "type": "Feature",
-            "properties": {
-              "pixelCoords": [
-                4652,
-                7185
-              ]
-            },
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                4.8915184,
-                52.3790687
+                4.8797106,
+                52.3946515
               ]
             }
           }
