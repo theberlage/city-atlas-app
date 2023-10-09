@@ -19,7 +19,7 @@
 	import EsriJSON from 'ol/format/EsriJSON.js'
 	import Select from 'ol/interaction/Select.js'
 	import { VectorSourceEvent } from 'ol/source/Vector'
-	import MapboxVector from 'ol/layer/MapboxVector'
+	import { MapboxVectorLayer } from 'ol-mapbox-style'
 
 	// Stores
 
@@ -41,8 +41,6 @@
 	import Slideshow from '$lib/components/Slideshow.svelte'
 	import About from '$lib/components/About.svelte'
 	import Bearlage from '$lib/components/Bearlage.svelte'
-	import { fill } from 'lodash-es'
-	import { colorToGlsl } from 'ol/style/expressions'
 
 	// Declaring changing variables with let and fixed ones with const
 
@@ -163,9 +161,26 @@
 	// Function to add Allmaps layer
 
 	async function addWarpedMapSource(annotations: any) {
-		let response = await Promise.all(annotations.map(fetchJson))
-		for (let annotation of response) {
-			await warpedMapSource.addGeoreferenceAnnotation(annotation)
+		for (let annotation of annotations) {
+			let response = await fetchJson(annotation.path)
+			let id = await warpedMapSource.addGeoreferenceAnnotation(response).then((resp) => resp[0])
+			if (annotation.opacity) {
+				let opacity = annotation.opacity / 100
+				warpedMapLayer.setMapOpacity(id, opacity)
+			}
+			if (annotation.removeBackground && annotation.removeBackground.color) {
+				let hexColor = annotation.removeBackground.color
+				let threshold = annotation.removeBackground.threshold
+					? annotation.removeBackground.threshold / 100
+					: 0.1
+				let hardness = annotation.removeBackground.hardness
+					? annotation.removeBackground.hardness / 100
+					: 0.1
+				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
+			}
+			if (annotation.colorize) {
+				warpedMapLayer.setMapColorize(id, annotation.colorize)
+			}
 		}
 	}
 
@@ -194,8 +209,8 @@
 	// Function to change layers and view depending on state
 
 	async function changeView() {
-		let rotation: number
-		let extent: Extent
+		let rotation: number = 0
+		let extent: Extent | undefined = undefined
 		let geojsons: Array<string>
 		let xyz: string
 		let annotations: Array<String>
@@ -206,7 +221,7 @@
 		warpedMapSource.clear()
 		vectorSource.clear()
 		xyzSource.setUrl('')
-    xyzSource.clear()
+		xyzSource.clear()
 
 		if (slide !== undefined) {
 			selectedSlide = $slidesByProject[slide][index]
@@ -226,7 +241,7 @@
 
 		if (selectedSlide.frontmatter.allmaps && selectedSlide.frontmatter.allmaps.length > 0) {
 			annotations = selectedSlide.frontmatter.allmaps.map((item: any) => {
-				return path + '/annotations/' + item.annotation
+				return { path: path + '/annotations/' + item.annotation, ...item }
 			})
 			addWarpedMapSource(annotations.reverse())
 		}
@@ -276,11 +291,11 @@
 			zIndex: 1
 		})
 
-		let mapBoxLayer = new MapboxVector({
-			styleUrl: 'mapbox://styles/eliottmoreau/cld2u07au002k01ql8ku1gx29',
-			accessToken:
-				'pk.eyJ1IjoiZWxpb3R0bW9yZWF1IiwiYSI6ImNsY3N0bWUwcDBlNXYzd3MxaGptMDlyeXgifQ.pXVx5GYbNMBGYDNY_gQZVg'
-		})
+		// let mapBoxLayer = new MapboxVectorLayer({
+		// 	styleUrl: 'mapbox://styles/eliottmoreau/cld2u07au002k01ql8ku1gx29',
+		// 	accessToken:
+		// 		'pk.eyJ1IjoiZWxpb3R0bW9yZWF1IiwiYSI6ImNsY3N0bWUwcDBlNXYzd3MxaGptMDlyeXgifQ.pXVx5GYbNMBGYDNY_gQZVg'
+		// })
 
 		// let esriLayer = new TileLayer({
 		// 	source: new XYZ({
@@ -290,10 +305,10 @@
 		// 	})
 		// })
 
-		let osmLayer = new TileLayer({
-			source: new OSM(),
-			zIndex: 1
-		})
+		// let osmLayer = new TileLayer({
+		// 	source: new OSM(),
+		// 	zIndex: 1
+		// })
 
 		map = new Map({
 			view,

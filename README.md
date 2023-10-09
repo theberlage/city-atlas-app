@@ -54,9 +54,12 @@ allmaps: # List of maps
       name: Regionaal Archief Dordrecht
       url: https://www.regionaalarchiefdordrecht.nl
     annotation: annotation-01.json # Georef annotation filename in the project's annotations/ folder
-    opacity: 50 # Setting from 0 to 100 (optional)
-    mask: rgb(255,0,0) # Mask based on color, RGB value (optional)
-    colorize: rgb(255,0,0) # Colorize image after masking, RGB value (optional)
+    opacity: 100 # 0-100
+    removeBackground:
+      color: '#f0dbbc' # Hex color code
+      threshold: 20 # 0-100
+      hardness: 20 # 0-100
+    colorize: '#8c00ff' # Hex color code
 ```
 
 **GeoJSON**

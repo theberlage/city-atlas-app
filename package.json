@@ -1,5 +1,5 @@
 {
-  "name": "berlage-test-app",
+  "name": "berlage-city-atlas",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,32 +13,33 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0",
-    "@sveltejs/kit": "^1.0.0",
+    "@sveltejs/kit": "^1.5.0",
     "@types/lodash-es": "^4.17.6",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
-    "eslint": "^8.28.0",
+    "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "mdsvex": "^0.10.6",
+    "eslint-plugin-svelte": "^2.28.0",
+    "mdsvex": "^0.11.0",
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
-    "remark-frontmatter": "^4.0.1",
-    "remark-html": "^15.0.1",
-    "remark-parse": "^10.0.1",
-    "svelte": "^3.54.0",
-    "svelte-check": "^2.9.2",
+    "remark-frontmatter": "^5.0.0",
+    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
+    "svelte": "^3.55.0",
+    "svelte-check": "^3.0.1",
     "to-vfile": "^7.2.3",
-    "tslib": "^2.4.1",
-    "typescript": "^4.9.3",
-    "unified": "^10.1.2",
-    "vfile-matter": "^4.0.0",
-    "vite": "^4.0.0"
+    "tslib": "^2.6.2",
+    "typescript": "^5.0.0",
+    "unified": "^11.0.3",
+    "vfile-matter": "^5.0.0",
+    "vite": "^4.3.0"
   },
   "type": "module",
   "dependencies": {
-    "@allmaps/openlayers": "1.0.0-beta.38",
+    "@allmaps/openlayers": "1.0.0-beta.40",
     "lodash-es": "^4.17.21",
-    "ol": "^7.1.0"
+    "ol": "^8.1.0",
+    "ol-mapbox-style": "^12.0.0"
   }
 }
