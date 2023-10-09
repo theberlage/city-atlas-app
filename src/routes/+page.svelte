@@ -291,11 +291,10 @@
 			zIndex: 1
 		})
 
-		// let mapBoxLayer = new MapboxVectorLayer({
-		// 	styleUrl: 'mapbox://styles/eliottmoreau/cld2u07au002k01ql8ku1gx29',
-		// 	accessToken:
-		// 		'pk.eyJ1IjoiZWxpb3R0bW9yZWF1IiwiYSI6ImNsY3N0bWUwcDBlNXYzd3MxaGptMDlyeXgifQ.pXVx5GYbNMBGYDNY_gQZVg'
-		// })
+		let mapBoxLayer = new MapboxVectorLayer({
+			styleUrl: $homePage.frontmatter.mapbox.styleUrl,
+			accessToken: $homePage.frontmatter.mapbox.accessToken
+		})
 
 		// let esriLayer = new TileLayer({
 		// 	source: new XYZ({
@@ -316,7 +315,7 @@
 				xyzLayer,
 				// esriLayer,
 				// osmLayer,
-				// mapBoxLayer,
+				mapBoxLayer,
 				warpedMapLayer,
 				vectorLayer
 			],
