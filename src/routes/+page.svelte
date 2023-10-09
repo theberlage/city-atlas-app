@@ -20,6 +20,8 @@
 	import Select from 'ol/interaction/Select.js'
 	import { VectorSourceEvent } from 'ol/source/Vector'
 	import { MapboxVectorLayer } from 'ol-mapbox-style'
+	import { fromExtent } from 'ol/geom/Polygon'
+	import Feature from 'ol/Feature.js'
 
 	// Stores
 
@@ -69,7 +71,7 @@
 			width: 4
 		}),
 		fill: new Fill({
-			color: 'rgba(255, 255, 255, 0)'
+			color: 'rgba(255, 255, 0, 0)'
 		})
 	})
 
@@ -101,7 +103,7 @@
 		return fetch(url).then((response) => response.json())
 	}
 
-  // From: https://gist.github.com/danieliser/b4b24c9f772066bcf0a6
+	// From: https://gist.github.com/danieliser/b4b24c9f772066bcf0a6
 
 	function convertHexToRGBA(hexCode, opacity = 1) {
 		let hex = hexCode.replace('#', '')
@@ -126,7 +128,6 @@
 
 	async function addVectorSource(geojsonsPaths: Array<string>) {
 		let geojsons = await Promise.all(geojsonsPaths.map(fetchJson))
-		let extent: Extent
 
 		for (let geojson of geojsons) {
 			let features = new GeoJSON().readFeatures(geojson, {
@@ -138,7 +139,7 @@
 		vectorSource.forEachFeature(function (feature) {
 			let properties = feature.getProperties()
 
-			let fillOpacity = properties['fill-opacity'] ? properties['fill-opacity'] : 1
+			let fillOpacity = properties['fill-opacity'] ? properties['fill-opacity'] : 0.5
 			let strokeOpacity = properties['stoke-opacity'] ? properties['stroke-opacity'] : 1
 
 			let fillColor =
@@ -146,14 +147,14 @@
 					? properties.fill
 					: properties.fill && properties.stroke.includes('#')
 					? convertHexToRGBA(properties.fill, fillOpacity)
-					: 'black'
+					: 'rgba(255, 255, 0, 0)'
 
-      let strokeColor =
+			let strokeColor =
 				properties.stroke && properties.stroke.includes('rgba')
 					? properties.stroke
 					: properties.stroke && properties.stroke.includes('#')
 					? convertHexToRGBA(properties.stroke, strokeOpacity)
-					: 'black'
+					: 'rgba(255, 255, 0, 1)'
 
 			let strokeWidth = properties['stroke-width'] ? properties['stroke-width'] : 2
 			let radius = properties.radius ? properties.radius : 10
@@ -224,10 +225,17 @@
 		let center = getCenter(extent)
 		let resolution = view.getResolutionForExtent(extent, map.getSize())
 
+		let bboxPolygon = fromExtent(extent)
+		let bboxFeature = new Feature({
+			geometry: bboxPolygon
+		})
+
+		vectorSource.addFeature(bboxFeature)
+
 		view.animate({
-			center: center,
-			resolution: resolution,
-			rotation: rotation
+			center,
+			resolution,
+			rotation
 		})
 		// await sleep(duration)
 	}
@@ -252,17 +260,14 @@
 		if (slide !== undefined) {
 			selectedSlide = $slidesByProject[slide][index]
 			slideCount = $slidesByProject[slide].length
-			extent = calculateExtent(selectedSlide.frontmatter.viewer.bbox)
-			rotation = selectedSlide.frontmatter.viewer.rotation * (Math.PI / 180)
 			path = '/projects/' + $slideShowID
 		} else if (slide === undefined) {
 			selectedSlide = $homePage
-			extent = calculateExtent(selectedSlide.frontmatter.viewer.bbox)
-			rotation = selectedSlide.frontmatter.viewer.rotation * (Math.PI / 180)
 			path = '/overview'
-			await animateView(extent, rotation)
 		}
 
+		extent = calculateExtent(selectedSlide.frontmatter.viewer.bbox)
+		rotation = selectedSlide.frontmatter.viewer.rotation * (Math.PI / 180)
 		await animateView(extent, rotation)
 
 		if (selectedSlide.frontmatter.allmaps && selectedSlide.frontmatter.allmaps.length > 0) {
@@ -293,6 +298,7 @@
 		view = new View({
 			// center: initialViewCoords,
 			// zoom: 8
+			padding: [0, 400, 0, 0]
 		})
 
 		vectorSource = new VectorSource()
@@ -521,5 +527,13 @@
 		width: 100%;
 		height: 100%;
 		z-index: 1;
+	}
+
+	.full {
+		grid-column: 1 / 5;
+	}
+
+	.part {
+		grid-column: 1 / 4;
 	}
 </style>
