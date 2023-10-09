@@ -101,6 +101,27 @@
 		return fetch(url).then((response) => response.json())
 	}
 
+  // From: https://gist.github.com/danieliser/b4b24c9f772066bcf0a6
+
+	function convertHexToRGBA(hexCode, opacity = 1) {
+		let hex = hexCode.replace('#', '')
+
+		if (hex.length === 3) {
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`
+		}
+
+		const r = parseInt(hex.substring(0, 2), 16)
+		const g = parseInt(hex.substring(2, 4), 16)
+		const b = parseInt(hex.substring(4, 6), 16)
+
+		/* Backward compatibility for whole number based opacity values. */
+		if (opacity > 1 && opacity <= 100) {
+			opacity = opacity / 100
+		}
+
+		return `rgba(${r},${g},${b},${opacity})`
+	}
+
 	// Function to add vector layer
 
 	async function addVectorSource(geojsonsPaths: Array<string>) {
@@ -117,19 +138,24 @@
 		vectorSource.forEachFeature(function (feature) {
 			let properties = feature.getProperties()
 
-			let fillColor = properties['fill'] ? Color.asArray(properties.fill) : 'yellow'
+			let fillOpacity = properties['fill-opacity'] ? properties['fill-opacity'] : 1
+			let strokeOpacity = properties['stoke-opacity'] ? properties['stroke-opacity'] : 1
 
-			if (properties['fill-opacity']) {
-				fillColor[3] = properties['fill-opacity']
-			}
+			let fillColor =
+				properties.fill && properties.fill.includes('rgba')
+					? properties.fill
+					: properties.fill && properties.stroke.includes('#')
+					? convertHexToRGBA(properties.fill, fillOpacity)
+					: 'black'
 
-			let strokeColor = properties['stroke'] ? Color.asArray(properties.stroke) : 'yellow'
+      let strokeColor =
+				properties.stroke && properties.stroke.includes('rgba')
+					? properties.stroke
+					: properties.stroke && properties.stroke.includes('#')
+					? convertHexToRGBA(properties.stroke, strokeOpacity)
+					: 'black'
 
-			if (properties['stroke-opacity']) {
-				strokeColor[3] = properties['stroke-opacity']
-			}
-
-			let strokeWidth = properties['stroke-width'] ? properties['stroke-width'] : 4
+			let strokeWidth = properties['stroke-width'] ? properties['stroke-width'] : 2
 			let radius = properties.radius ? properties.radius : 10
 
 			let customStyle = new Style({
