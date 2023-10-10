@@ -205,9 +205,13 @@
 					: 0.1
 				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
 			}
+      if (annotation.saturation) {
+				warpedMapLayer.setMapSaturation(id, annotation.saturation)
+			}
 			if (annotation.colorize) {
 				warpedMapLayer.setMapColorize(id, annotation.colorize)
 			}
+
 		}
 	}
 
