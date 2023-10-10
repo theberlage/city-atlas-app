@@ -191,27 +191,30 @@
 		for (let annotation of annotations) {
 			let response = await fetchJson(annotation.path)
 			let id = await warpedMapSource.addGeoreferenceAnnotation(response).then((resp) => resp[0])
-			if (annotation.opacity) {
+			if (annotation.opacity !== undefined && annotation.opacity !== null) {
 				let opacity = annotation.opacity / 100
 				warpedMapLayer.setMapOpacity(id, opacity)
 			}
 			if (annotation.removeBackground && annotation.removeBackground.color) {
 				let hexColor = annotation.removeBackground.color
-				let threshold = annotation.removeBackground.threshold
-					? annotation.removeBackground.threshold / 100
-					: 0.1
-				let hardness = annotation.removeBackground.hardness
-					? annotation.removeBackground.hardness / 100
-					: 0.1
+				let threshold =
+					annotation.removeBackground.threshold !== undefined &&
+					annotation.removeBackground.threshold !== null
+						? annotation.removeBackground.threshold / 100
+						: 0.1
+				let hardness =
+					annotation.removeBackground.hardness !== undefined &&
+					annotation.removeBackground.hardness !== null
+						? annotation.removeBackground.hardness / 100
+						: 0.1
 				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
 			}
-      if (annotation.saturation) {
-				warpedMapLayer.setMapSaturation(id, annotation.saturation)
+			if (annotation.saturation !== undefined && annotation.saturation !== null) {
+				warpedMapLayer.setMapSaturation(id, annotation.saturation / 100)
 			}
 			if (annotation.colorize) {
 				warpedMapLayer.setMapColorize(id, annotation.colorize)
 			}
-
 		}
 	}
 

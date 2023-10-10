@@ -232,10 +232,7 @@
             },
             "properties": {
                 "fill": "#294c78",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "rgba(50, 47, 130, 0)",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -345,10 +342,7 @@
             },
             "properties": {
                 "fill": "#294c78",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "rgba(50, 47, 130, 0)",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -702,10 +696,7 @@
             },
             "properties": {
                 "fill": "#294c78",
-                "stroke": "rgba(50, 47, 130, 0)",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke-width": 0
+                "fill-opacity": 0.1
             }
         },
         {
@@ -907,10 +898,7 @@
             },
             "properties": {
                 "fill": "#294c78",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "rgba(50, 47, 130, 0)",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1052,10 +1040,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.5
             }
         },
         {
@@ -1185,10 +1170,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.4
             }
         },
         {
@@ -1226,10 +1208,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1267,10 +1246,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1380,10 +1356,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.4
             }
         },
         {
@@ -1417,10 +1390,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1454,10 +1424,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1491,10 +1458,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1528,10 +1492,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1565,10 +1526,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
@@ -1602,10 +1560,7 @@
             },
             "properties": {
                 "fill": "#f7d146",
-                "fill-opacity": 0.3,
-                "stroke-opacity": 0,
-                "stroke": "#f7d146",
-                "stroke-width": 0
+                "fill-opacity": 0.3
             }
         },
         {
