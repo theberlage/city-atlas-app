@@ -47,7 +47,7 @@
 	// down = 40
 	// right = 39
 	// left = 37
-  // esc = 27
+	// esc = 27
 
 	function onKeyDown(e: any) {
 		switch (e.keyCode) {
@@ -77,9 +77,11 @@
 			<ul>
 				{#if annotations}
 					{#each annotations as annotation}
-						<li>
-							{annotation.label}
-						</li>
+						{#if annotation.label}
+							<li>
+								{annotation.label}
+							</li>
+						{/if}
 					{/each}
 				{/if}
 			</ul>
