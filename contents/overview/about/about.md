@@ -11,9 +11,9 @@ xyz:
 allmaps:
   - label: Vijzelstraat (1625)
     annotation: 1625frontpage.json
-    label: Houthavens (1884)
+  - label: Houthavens (1884)
     annotation: 1884n.json
-    label: Helmersbuurt
+  - label: Helmersbuurt
     annotation: helmersbuurtcover.json
   - label: Balthasar Florisz Van Berckenrode (1625)
     annotation: berckenrode_1625.json
