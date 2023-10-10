@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@allmaps/openlayers':
-    specifier: 1.0.0-beta.40
-    version: 1.0.0-beta.40
+    specifier: 1.0.0-beta.41
+    version: 1.0.0-beta.41
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -99,9 +99,9 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@allmaps/id@1.0.0-beta.18:
-    resolution: {integrity: sha512-QF9O1VAHxQ7+99P5HlxOvnv0aZcCYe92woBIkbuI1mwh3tLhE039gHxzS08m0Z0nCOWdRZ0OpuM2ZwZID5YPZg==}
-    engines: {node: '>=v20.8.0'}
+  /@allmaps/id@1.0.0-beta.19:
+    resolution: {integrity: sha512-mxb3a82jY0Tn5iX0DDsSf6lgpE4CP1jjA4j3LbAOcdlzcegl6d0VYbANVJ9K8sbLnxkZVv4yTKAC2pGDwgv/3Q==}
+    engines: {node: '>=v19.0.0'}
     dev: false
 
   /@allmaps/iiif-parser@1.0.0-beta.26:
@@ -110,19 +110,19 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@allmaps/openlayers@1.0.0-beta.40:
-    resolution: {integrity: sha512-5eD1XldZ6+KJmmNOsKaT5PM/hHD2UoReNnnq8rrTybCAKniGtqW4rz3X7l4ysRZpdkx4YWV5sFT0yHFTxCL5tw==}
+  /@allmaps/openlayers@1.0.0-beta.41:
+    resolution: {integrity: sha512-7f3eZF2mXeTj8dtyQXN5jdejavIbaGv15vkvfyMcSMMQzwT+UwPDHGuaPbagBhpqBLpmpBGVppyvdzXR9feCUw==}
     dependencies:
-      '@allmaps/render': 1.0.0-beta.37
+      '@allmaps/render': 1.0.0-beta.38
       lodash-es: 4.17.21
       ol: 8.1.0
     dev: false
 
-  /@allmaps/render@1.0.0-beta.37:
-    resolution: {integrity: sha512-F0blesmQvzJy6ksOhhvxtd77aNfJNYThPVBU3LkFlnJBoFuJZhVPL5OGSCWu0//NBhBlpcRKwhJZ+GN1f7luMg==}
+  /@allmaps/render@1.0.0-beta.38:
+    resolution: {integrity: sha512-7HNtqH14zRgPC/Z3FLVdlMDy7rejuo23ZdEZY83xusFNzMmCQnxkhYiDXHcxx1G4os4RAzlOTFZP1h+RFNJF7w==}
     dependencies:
       '@allmaps/annotation': 1.0.0-beta.17
-      '@allmaps/id': 1.0.0-beta.18
+      '@allmaps/id': 1.0.0-beta.19
       '@allmaps/iiif-parser': 1.0.0-beta.26
       '@allmaps/stdlib': 1.0.0-beta.13
       '@allmaps/transform': 1.0.0-beta.16
