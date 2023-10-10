@@ -12,7 +12,7 @@ allmaps:
   - label: Balthasar Florisz Van Berckenrode (1625)
     annotation: berckenrode_1625.json
 mapbox:
-  styleUrl: 'mapbox://styles/momokb/clnbqsrx101tj01qngayi305z'
+  styleUrl: 'mapbox://styles/momokb/clnk7dduu000801pgefgra6yk'
   accessToken: 'pk.eyJ1IjoibW9tb2tiIiwiYSI6ImNsbmJxcGtrODBkYnUyaXI3Yjl2ODR1NTkifQ.OvugAnw_FwWro66sJ7Rl5A'
 ---
 ## Project NL
