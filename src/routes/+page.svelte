@@ -258,10 +258,12 @@
 		xyzSource.clear()
 
 		if (slide !== undefined) {
+			view.padding = [0, 400, 0, 0]
 			selectedSlide = $slidesByProject[slide][index]
 			slideCount = $slidesByProject[slide].length
 			path = '/projects/' + $slideShowID
 		} else if (slide === undefined) {
+			view.padding = [0, 0, 0, 0]
 			selectedSlide = $homePage
 			path = '/overview'
 		}
@@ -298,7 +300,6 @@
 		view = new View({
 			// center: initialViewCoords,
 			// zoom: 8
-			padding: [0, 400, 0, 0]
 		})
 
 		vectorSource = new VectorSource()
@@ -314,10 +315,7 @@
 			zIndex: 2
 		})
 
-		xyzSource = new XYZ({
-			url: 'https://images.huygens.knaw.nl/webmapper/maps/pw-1985/{z}/{x}/{y}.png'
-		})
-
+		xyzSource = new XYZ()
 		xyzLayer = new TileLayer({
 			source: xyzSource,
 			zIndex: 1
