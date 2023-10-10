@@ -202,7 +202,8 @@
                 "fill": "#294c78",
                 "stroke": "#294c78",
                 "fill-opacity": 0.4,
-                "stroke-opacity": 0
+                "stroke-opacity": 0,
+                "stroke-width": 0
             }
         },
         {
@@ -326,7 +327,8 @@
                 "fill": "#294c78",
                 "stroke": "#294c78",
                 "fill-opacity": 0.4,
-                "stroke-opacity": 0
+                "stroke-opacity": 0,
+                "stroke-width": 0
             }
         },
         {
@@ -569,7 +571,9 @@
             "properties": {
                 "fill": "#294c78",
                 "fill-opacity": 0.4,
-                "stroke-opacity": 0
+                "stroke-opacity": 0,
+                "stroke": "#294c78",
+                "stroke-width": 0
             }
         },
         {
