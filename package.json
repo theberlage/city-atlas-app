@@ -37,7 +37,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@allmaps/openlayers": "1.0.0-beta.40",
+    "@allmaps/openlayers": "1.0.0-beta.41",
     "lodash-es": "^4.17.21",
     "ol": "^8.1.0",
     "ol-mapbox-style": "^12.0.0"
