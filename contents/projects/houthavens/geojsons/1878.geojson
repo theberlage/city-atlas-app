@@ -4159,10 +4159,10 @@
                 ]
             },
             "properties": {
-                "stroke": "#294c78",
+                "stroke": "#9eb1c9",
                 "preflabel": 1590,
-                "stroke-opacity": 0.5,
-                "stroke-width": 3
+                "stroke-width": 3,
+                "stroke-opacity": 1
             }
         },
         {
