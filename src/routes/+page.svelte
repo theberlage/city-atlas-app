@@ -20,6 +20,8 @@
 	import Select from 'ol/interaction/Select.js'
 	import { VectorSourceEvent } from 'ol/source/Vector'
 	import { MapboxVectorLayer } from 'ol-mapbox-style'
+	import { fromExtent } from 'ol/geom/Polygon'
+	import Feature from 'ol/Feature.js'
 
 	// Stores
 
@@ -69,7 +71,7 @@
 			width: 4
 		}),
 		fill: new Fill({
-			color: 'rgba(255, 255, 255, 0)'
+			color: 'rgba(255, 255, 0, 0)'
 		})
 	})
 
@@ -101,11 +103,31 @@
 		return fetch(url).then((response) => response.json())
 	}
 
+	// From: https://gist.github.com/danieliser/b4b24c9f772066bcf0a6
+
+	function convertHexToRGBA(hexCode, opacity = 1) {
+		let hex = hexCode.replace('#', '')
+
+		if (hex.length === 3) {
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`
+		}
+
+		const r = parseInt(hex.substring(0, 2), 16)
+		const g = parseInt(hex.substring(2, 4), 16)
+		const b = parseInt(hex.substring(4, 6), 16)
+
+		/* Backward compatibility for whole number based opacity values. */
+		if (opacity > 1 && opacity <= 100) {
+			opacity = opacity / 100
+		}
+
+		return `rgba(${r},${g},${b},${opacity})`
+	}
+
 	// Function to add vector layer
 
 	async function addVectorSource(geojsonsPaths: Array<string>) {
 		let geojsons = await Promise.all(geojsonsPaths.map(fetchJson))
-		let extent: Extent
 
 		for (let geojson of geojsons) {
 			let features = new GeoJSON().readFeatures(geojson, {
@@ -117,19 +139,24 @@
 		vectorSource.forEachFeature(function (feature) {
 			let properties = feature.getProperties()
 
-			let fillColor = properties['fill'] ? Color.asArray(properties.fill) : 'yellow'
+			let fillOpacity = properties['fill-opacity'] ? properties['fill-opacity'] : 0.5
+			let strokeOpacity = properties['stoke-opacity'] ? properties['stroke-opacity'] : 1
 
-			if (properties['fill-opacity']) {
-				fillColor[3] = properties['fill-opacity']
-			}
+			let fillColor =
+				properties.fill && properties.fill.includes('rgba')
+					? properties.fill
+					: properties.fill && properties.stroke.includes('#')
+					? convertHexToRGBA(properties.fill, fillOpacity)
+					: 'rgba(255, 255, 0, 0)'
 
-			let strokeColor = properties['stroke'] ? Color.asArray(properties.stroke) : 'yellow'
+			let strokeColor =
+				properties.stroke && properties.stroke.includes('rgba')
+					? properties.stroke
+					: properties.stroke && properties.stroke.includes('#')
+					? convertHexToRGBA(properties.stroke, strokeOpacity)
+					: 'rgba(255, 255, 0, 1)'
 
-			if (properties['stroke-opacity']) {
-				strokeColor[3] = properties['stroke-opacity']
-			}
-
-			let strokeWidth = properties['stroke-width'] ? properties['stroke-width'] : 4
+			let strokeWidth = properties['stroke-width'] ? properties['stroke-width'] : 2
 			let radius = properties.radius ? properties.radius : 10
 
 			let customStyle = new Style({
@@ -198,10 +225,17 @@
 		let center = getCenter(extent)
 		let resolution = view.getResolutionForExtent(extent, map.getSize())
 
+		let bboxPolygon = fromExtent(extent)
+		let bboxFeature = new Feature({
+			geometry: bboxPolygon
+		})
+
+		vectorSource.addFeature(bboxFeature)
+
 		view.animate({
-			center: center,
-			resolution: resolution,
-			rotation: rotation
+			center,
+			resolution,
+			rotation
 		})
 		// await sleep(duration)
 	}
@@ -224,19 +258,18 @@
 		xyzSource.clear()
 
 		if (slide !== undefined) {
+			view.padding = [0, 400, 0, 0]
 			selectedSlide = $slidesByProject[slide][index]
 			slideCount = $slidesByProject[slide].length
-			extent = calculateExtent(selectedSlide.frontmatter.viewer.bbox)
-			rotation = selectedSlide.frontmatter.viewer.rotation * (Math.PI / 180)
 			path = '/projects/' + $slideShowID
 		} else if (slide === undefined) {
+			view.padding = [0, 0, 0, 0]
 			selectedSlide = $homePage
-			extent = calculateExtent(selectedSlide.frontmatter.viewer.bbox)
-			rotation = selectedSlide.frontmatter.viewer.rotation * (Math.PI / 180)
 			path = '/overview'
-			await animateView(extent, rotation)
 		}
 
+		extent = calculateExtent(selectedSlide.frontmatter.viewer.bbox)
+		rotation = selectedSlide.frontmatter.viewer.rotation * (Math.PI / 180)
 		await animateView(extent, rotation)
 
 		if (selectedSlide.frontmatter.allmaps && selectedSlide.frontmatter.allmaps.length > 0) {
@@ -282,20 +315,16 @@
 			zIndex: 2
 		})
 
-		xyzSource = new XYZ({
-			url: 'https://images.huygens.knaw.nl/webmapper/maps/pw-1985/{z}/{x}/{y}.png'
-		})
-
+		xyzSource = new XYZ()
 		xyzLayer = new TileLayer({
 			source: xyzSource,
 			zIndex: 1
 		})
 
-		// let mapBoxLayer = new MapboxVectorLayer({
-		// 	styleUrl: 'mapbox://styles/eliottmoreau/cld2u07au002k01ql8ku1gx29',
-		// 	accessToken:
-		// 		'pk.eyJ1IjoiZWxpb3R0bW9yZWF1IiwiYSI6ImNsY3N0bWUwcDBlNXYzd3MxaGptMDlyeXgifQ.pXVx5GYbNMBGYDNY_gQZVg'
-		// })
+		let mapBoxLayer = new MapboxVectorLayer({
+			styleUrl: $homePage.frontmatter.mapbox.styleUrl,
+			accessToken: $homePage.frontmatter.mapbox.accessToken
+		})
 
 		// let esriLayer = new TileLayer({
 		// 	source: new XYZ({
@@ -316,7 +345,7 @@
 				xyzLayer,
 				// esriLayer,
 				// osmLayer,
-				// mapBoxLayer,
+				mapBoxLayer,
 				warpedMapLayer,
 				vectorLayer
 			],
@@ -496,5 +525,13 @@
 		width: 100%;
 		height: 100%;
 		z-index: 1;
+	}
+
+	.full {
+		grid-column: 1 / 5;
+	}
+
+	.part {
+		grid-column: 1 / 4;
 	}
 </style>
