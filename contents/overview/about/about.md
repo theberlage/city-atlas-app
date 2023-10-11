@@ -9,14 +9,16 @@ geojson:
     label: Locations
 xyz:
 allmaps:
-  - label: Vijzelstraat (1625)
-    annotation: 1625frontpage.json
+  - label: Uilenburg
+    annotation: 1625frontpagenew.json
   - label: Houthavens
-    annotation: houthavens.json
+    annotation: houthavensnew.json
   - label: Helmersbuurt
     annotation: helmersbuurtcover.json
-  - label: Slotermeer
+  - label: Amsterdam Plan Tuistad-Slotermeer, 1952, scale 1:10.000
     annotation: slotermeer.json
+  - label: vijzelstraat
+    annotation: vijzelstraat-map0.json
 mapbox:
   styleUrl: 'mapbox://styles/momokb/clnk7dduu000801pgefgra6yk'
   accessToken: 'pk.eyJ1IjoibW9tb2tiIiwiYSI6ImNsbmJxcGtrODBkYnUyaXI3Yjl2ODR1NTkifQ.OvugAnw_FwWro66sJ7Rl5A'
