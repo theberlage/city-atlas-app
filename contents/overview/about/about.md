@@ -11,12 +11,12 @@ xyz:
 allmaps:
   - label: Vijzelstraat (1625)
     annotation: 1625frontpage.json
-  - label: Houthavens (1884)
-    annotation: 1884n.json
+  - label: Houthavens
+    annotation: houthavens.json
   - label: Helmersbuurt
     annotation: helmersbuurtcover.json
-  - label: Balthasar Florisz Van Berckenrode (1625)
-    annotation: berckenrode_1625.json
+  - label: Slotermeer
+    annotation: slotermeer.json
 mapbox:
   styleUrl: 'mapbox://styles/momokb/clnk7dduu000801pgefgra6yk'
   accessToken: 'pk.eyJ1IjoibW9tb2tiIiwiYSI6ImNsbmJxcGtrODBkYnUyaXI3Yjl2ODR1NTkifQ.OvugAnw_FwWro66sJ7Rl5A'
