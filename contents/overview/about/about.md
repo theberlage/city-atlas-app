@@ -12,7 +12,7 @@ allmaps:
   - label: Vijzelstraat (1625)
     annotation: 1625frontpage.json
   - label: Houthavens
-    annotation: houthavens.json
+    annotation: houthavensnew.json
   - label: Helmersbuurt
     annotation: helmersbuurtcover.json
   - label: Balthasar Florisz Van Berckenrode (1625)
