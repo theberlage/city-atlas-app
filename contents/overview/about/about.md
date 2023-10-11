@@ -10,7 +10,7 @@ geojson:
 xyz:
 allmaps:
   - label: Uilenburg
-    annotation: 1625frontpagenew.json
+    annotation: 1625frontpagenew2.json
   - label: Houthavens
     annotation: houthavensnew.json
   - label: Helmersbuurt
