@@ -19,6 +19,15 @@ allmaps:
     annotation: slotermeer.json
   - label: vijzelstraat
     annotation: vijzelstraat-map0.json
+  - label: bijlmermeer
+    annotation: 05bijlmercovermap.json
+    opacity: 100
+    saturation: 100
+    removeBackground:
+      color: 
+      threshold: 
+      hardness: 
+    colorize: "#570a0a"
 mapbox:
   styleUrl: 'mapbox://styles/momokb/clnk7dduu000801pgefgra6yk'
   accessToken: 'pk.eyJ1IjoibW9tb2tiIiwiYSI6ImNsbmJxcGtrODBkYnUyaXI3Yjl2ODR1NTkifQ.OvugAnw_FwWro66sJ7Rl5A'
