@@ -139,25 +139,25 @@
 		vectorSource.forEachFeature(function (feature) {
 			let properties = feature.getProperties()
 
-			let fillOpacity = properties['fill-opacity'] ? properties['fill-opacity'] : 0.5
-			let strokeOpacity = properties['stoke-opacity'] ? properties['stroke-opacity'] : 1
+			let fillOpacity = 'fill-opacity' in properties ? properties['fill-opacity'] : 0
+			let strokeOpacity = 'stroke-opacity' in properties ? properties['stroke-opacity'] : 1
 
 			let fillColor =
 				properties.fill && properties.fill.includes('rgba')
 					? properties.fill
-					: properties.fill && properties.stroke.includes('#')
+					: properties.fill && properties.fill.includes('#')
 					? convertHexToRGBA(properties.fill, fillOpacity)
-					: 'rgba(255, 255, 0, 0)'
+					: `rgba(255, 255, 0, ${fillOpacity})`
 
 			let strokeColor =
 				properties.stroke && properties.stroke.includes('rgba')
 					? properties.stroke
 					: properties.stroke && properties.stroke.includes('#')
 					? convertHexToRGBA(properties.stroke, strokeOpacity)
-					: 'rgba(255, 255, 0, 1)'
+					: `rgba(255, 255, 0, ${strokeOpacity})`
 
-			let strokeWidth = properties['stroke-width'] ? properties['stroke-width'] : 2
-			let radius = properties.radius ? properties.radius : 10
+			let strokeWidth = 'stroke-width' in properties ? properties['stroke-width'] : 2
+			let radius = 'radius' in properties ? properties.radius : 10
 
 			let customStyle = new Style({
 				stroke: new Stroke({
@@ -191,25 +191,18 @@
 		for (let annotation of annotations) {
 			let response = await fetchJson(annotation.path)
 			let id = await warpedMapSource.addGeoreferenceAnnotation(response).then((resp) => resp[0])
-			if (annotation.opacity !== undefined && annotation.opacity !== null) {
+			if ('opacity' in annotation) {
 				let opacity = annotation.opacity / 100
 				warpedMapLayer.setMapOpacity(id, opacity)
 			}
-			if (annotation.removeBackground && annotation.removeBackground.color) {
-				let hexColor = annotation.removeBackground.color
-				let threshold =
-					annotation.removeBackground.threshold !== undefined &&
-					annotation.removeBackground.threshold !== null
-						? annotation.removeBackground.threshold / 100
-						: 0.1
-				let hardness =
-					annotation.removeBackground.hardness !== undefined &&
-					annotation.removeBackground.hardness !== null
-						? annotation.removeBackground.hardness / 100
-						: 0.1
+			if (annotation.removeBackground?.color) {
+				let properties = annotation.removeBackground
+				let hexColor = properties.color
+				let threshold = 'threshold' in properties ? properties.threshold / 100 : 0.1
+				let hardness = 'hardness' in properties ? properties.hardness / 100 : 0.7
 				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
 			}
-			if (annotation.saturation !== undefined && annotation.saturation !== null) {
+			if ('saturation' in annotation) {
 				warpedMapLayer.setMapSaturation(id, annotation.saturation / 100)
 			}
 			if (annotation.colorize) {
