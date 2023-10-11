@@ -10,13 +10,11 @@ geojson:
 xyz:
 allmaps:
   - label: Vijzelstraat (1625)
-    annotation: 1625frontpage.json
+    annotation: 1625frontpagenew.json
   - label: Houthavens
     annotation: houthavensnew.json
   - label: Helmersbuurt
     annotation: helmersbuurtcover.json
-  - label: Balthasar Florisz Van Berckenrode (1625)
-    annotation: berckenrode_1625.json
   - label: Amsterdam Plan Tuistad-Slotermeer, 1952, scale 1:10.000
     annotation: slotermeer.json
 mapbox:
