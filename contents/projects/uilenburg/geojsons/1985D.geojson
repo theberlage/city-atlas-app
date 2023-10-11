@@ -412,6 +412,7 @@
             },
             "properties": {
                 "fill": "#bccf7a",
+                "stroke": "#000000",
                 "@circle": {
                     "type": "Mercator",
                     "center": [
@@ -419,8 +420,7 @@
                         52.371502194081735
                     ]
                 },
-                "stroke": "#000000",
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -842,7 +842,7 @@
                         52.371580732669244
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -1264,7 +1264,7 @@
                         52.37160248081756
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -1686,7 +1686,7 @@
                         52.371646361499046
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -2108,7 +2108,7 @@
                         52.3716917
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -2530,7 +2530,7 @@
                         52.37172836701701
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -2952,7 +2952,7 @@
                         52.3717598
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -3374,7 +3374,7 @@
                         52.3717309
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -3796,7 +3796,7 @@
                         52.37165892929619
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -4218,7 +4218,7 @@
                         52.37164365705634
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -4640,7 +4640,7 @@
                         52.37151888635753
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -5062,7 +5062,7 @@
                         52.3713566
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -5484,7 +5484,7 @@
                         52.3713079
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -5906,7 +5906,7 @@
                         52.371226376693095
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -6328,7 +6328,7 @@
                         52.3711598
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -6750,7 +6750,7 @@
                         52.3711391
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -7172,7 +7172,7 @@
                         52.3710761
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -7594,7 +7594,7 @@
                         52.371005
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -8016,7 +8016,7 @@
                         52.3709089
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -8438,7 +8438,7 @@
                         52.3708943
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -8860,7 +8860,7 @@
                         52.3708515
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -9282,7 +9282,7 @@
                         52.3708163
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -9704,7 +9704,7 @@
                         52.3707611
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -10126,7 +10126,7 @@
                         52.3706251
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -10548,7 +10548,7 @@
                         52.3706923
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -10970,7 +10970,7 @@
                         52.3706268
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -11392,7 +11392,7 @@
                         52.3706096
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -11814,7 +11814,7 @@
                         52.3705539
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -12236,7 +12236,7 @@
                         52.3703902
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -12658,7 +12658,7 @@
                         52.3704712
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -13080,7 +13080,7 @@
                         52.3703946
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -13502,7 +13502,7 @@
                         52.3703595
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -13924,7 +13924,7 @@
                         52.370476
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -14346,7 +14346,7 @@
                         52.37023113313968
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -14768,7 +14768,7 @@
                         52.3702856
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -15190,7 +15190,7 @@
                         52.3702589
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -15612,7 +15612,7 @@
                         52.3700537
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -16034,7 +16034,7 @@
                         52.37011452472293
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -16456,7 +16456,7 @@
                         52.3700489
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -16878,7 +16878,7 @@
                         52.3700172
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -17300,7 +17300,7 @@
                         52.3699704
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -17722,7 +17722,7 @@
                         52.3698163
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -18144,7 +18144,7 @@
                         52.3698552
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -18566,7 +18566,7 @@
                         52.3697924
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -18988,7 +18988,7 @@
                         52.3697758
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -19410,7 +19410,7 @@
                         52.3696612
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -19832,7 +19832,7 @@
                         52.3697494
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -20254,7 +20254,7 @@
                         52.3698605
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -20676,7 +20676,7 @@
                         52.3699692628979
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -21098,7 +21098,7 @@
                         52.3700066
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -21520,7 +21520,7 @@
                         52.370091
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -21942,7 +21942,7 @@
                         52.370226
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -22364,7 +22364,7 @@
                         52.3702601
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -22786,7 +22786,7 @@
                         52.3703002
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -23208,7 +23208,7 @@
                         52.3703101
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -23630,7 +23630,7 @@
                         52.3703885
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -24052,7 +24052,7 @@
                         52.370456
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -24474,7 +24474,7 @@
                         52.3704076
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -24896,7 +24896,7 @@
                         52.3704374
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -25318,7 +25318,7 @@
                         52.3705607
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -25740,7 +25740,7 @@
                         52.3705762
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -26162,7 +26162,7 @@
                         52.3705856
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -26584,7 +26584,7 @@
                         52.3706318
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -27006,7 +27006,7 @@
                         52.3706913
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -27428,7 +27428,7 @@
                         52.3706851
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -27850,7 +27850,7 @@
                         52.370547
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -28272,7 +28272,7 @@
                         52.3707484
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -28694,7 +28694,7 @@
                         52.3708243
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -29116,7 +29116,7 @@
                         52.3709074
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -29538,7 +29538,7 @@
                         52.3709578
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -29960,7 +29960,7 @@
                         52.3709915
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -30382,7 +30382,7 @@
                         52.3710097
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -30804,7 +30804,7 @@
                         52.3710259
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -31226,7 +31226,7 @@
                         52.3710607
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -31648,7 +31648,7 @@
                         52.3711352
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -32070,7 +32070,7 @@
                         52.3712388
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -32492,7 +32492,7 @@
                         52.3712631
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -32914,7 +32914,7 @@
                         52.3713666
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -33336,7 +33336,7 @@
                         52.3714012
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -33758,7 +33758,7 @@
                         52.37154243863723
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -34180,7 +34180,7 @@
                         52.3707014
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -34602,7 +34602,7 @@
                         52.3706517
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -35024,7 +35024,7 @@
                         52.370614
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         },
         {
@@ -35446,7 +35446,7 @@
                         52.3707388
                     ]
                 },
-                "stroke-width": 0.5
+                "stroke-width": 2
             }
         }
     ]
