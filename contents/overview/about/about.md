@@ -10,7 +10,7 @@ geojson:
 xyz:
 allmaps:
   - label: Vijzelstraat (1625)
-    annotation: 1625frontpage.json
+    annotation: 1625frontpagenew.json
   - label: Houthavens
     annotation: houthavensnew.json
   - label: Helmersbuurt
