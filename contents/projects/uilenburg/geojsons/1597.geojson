@@ -141,7 +141,7 @@
                 ]
             },
             "properties": {
-                "stroke": "#000000",
+                "stroke": "#0022ff",
                 "stroke-width": 3
             }
         },
@@ -209,7 +209,7 @@
                 ]
             },
             "properties": {
-                "stroke": "#000000",
+                "stroke": "#0022ff",
                 "stroke-width": 3
             }
         }
