@@ -10,7 +10,7 @@ geojson:
 xyz:
 allmaps:
   - label: Uilenburg
-    annotation: 1625frontpagenew2.json
+    annotation: 02uilenburgfrontpagenew2.json
      opacity: 100
     saturation: 100
     removeBackground:
