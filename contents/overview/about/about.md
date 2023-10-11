@@ -15,7 +15,9 @@ allmaps:
     annotation: houthavens.json
   - label: Helmersbuurt
     annotation: helmersbuurtcover.json
-  - label: Slotermeer
+  - label: Balthasar Florisz Van Berckenrode (1625)
+    annotation: berckenrode_1625.json
+  - label: Amsterdam Plan Tuistad-Slotermeer, 1952, scale 1:10.000
     annotation: slotermeer.json
 mapbox:
   styleUrl: 'mapbox://styles/momokb/clnk7dduu000801pgefgra6yk'
