@@ -225,12 +225,12 @@
 		let center = getCenter(extent)
 		let resolution = view.getResolutionForExtent(extent, map.getSize())
 
-		let bboxPolygon = fromExtent(extent)
-		let bboxFeature = new Feature({
-			geometry: bboxPolygon
-		})
+		// let bboxPolygon = fromExtent(extent)
+		// let bboxFeature = new Feature({
+		// 	geometry: bboxPolygon
+		// })
 
-		vectorSource.addFeature(bboxFeature)
+		// vectorSource.addFeature(bboxFeature)
 
 		view.animate({
 			center,
