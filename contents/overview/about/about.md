@@ -12,7 +12,7 @@ allmaps:
   - label: Uilenburg
     annotation: 02uilenburgfrontpagenew2.json
     opacity: 100
-    saturation: 0
+    saturation: 100
     removeBackground:
       color: 
       threshold: 
@@ -21,7 +21,7 @@ allmaps:
   - label: Houthavens
     annotation: houthavensnew.json
     opacity: 100
-    saturation: 0
+    saturation: 100
     removeBackground:
       color: 
       threshold: 
@@ -30,7 +30,7 @@ allmaps:
   - label: Helmersbuurt
     annotation: helmersbuurtcover.json
     opacity: 100
-    saturation: 0
+    saturation: 100
     removeBackground:
       color: 
       threshold: 
@@ -39,7 +39,7 @@ allmaps:
   - label: Amsterdam Plan Tuistad-Slotermeer, 1952, scale 1:10.000
     annotation: slotermeer.json
     opacity: 100
-    saturation: 0
+    saturation: 100
     removeBackground:
       color: 
       threshold: 
@@ -48,7 +48,7 @@ allmaps:
   - label: vijzelstraat
     annotation: vijzelstraat-map0.json
     opacity: 100
-    saturation: 0
+    saturation: 100
     removeBackground:
       color: 
       threshold: 
@@ -57,7 +57,7 @@ allmaps:
   - label: bijlmermeer
     annotation: 05bijlmercovermap.json
     opacity: 100
-    saturation: 0
+    saturation: 100
     removeBackground:
       color: 
       threshold: 
