@@ -18,7 +18,7 @@ allmaps:
   - label: Amsterdam Plan Tuistad-Slotermeer, 1952, scale 1:10.000
     annotation: slotermeer.json
   - label: vijzelstraat
-    annotation: vijzelstraat-map0.json
+    annotation: Vijzelstraat2.json
 mapbox:
   styleUrl: 'mapbox://styles/momokb/clnk7dduu000801pgefgra6yk'
   accessToken: 'pk.eyJ1IjoibW9tb2tiIiwiYSI6ImNsbmJxcGtrODBkYnUyaXI3Yjl2ODR1NTkifQ.OvugAnw_FwWro66sJ7Rl5A'
