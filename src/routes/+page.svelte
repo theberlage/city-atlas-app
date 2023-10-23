@@ -10,7 +10,7 @@
 	import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer.js'
 	import 'ol/ol.css'
 	import { fromLonLat } from 'ol/proj.js'
-	import ZoomToExtent from 'ol/control/ZoomToExtent.js'
+	import { Rotate, defaults as defaultControls } from 'ol/control.js'
 	import { getCenter } from 'ol/extent'
 	import GeoJSON from 'ol/format/GeoJSON.js'
 	import * as Color from 'ol/color.js'
@@ -25,7 +25,8 @@
 
 	// Stores
 
-	import { slidesByProject, slideShowID, slideIndex, homePage } from '$lib/components/stores'
+	import { slidesByProject, slideShowID, slideIndex, homePage } from '$lib/shared/slides'
+	import { hexToRGBA, defaultStyles, selectableStyles, selectedStyles } from '$lib/shared/styles'
 
 	// Allmaps
 
@@ -61,41 +62,8 @@
 	let selectedFeature: FeatureLike | undefined
 
 	let innerHeight: number
+	let innerWidth: number
 	let about: boolean = false
-
-	// Styles for OpenLayers
-
-	const styles = new Style({
-		stroke: new Stroke({
-			color: 'yellow',
-			width: 4
-		}),
-		fill: new Fill({
-			color: 'rgba(255, 255, 0, 0)'
-		})
-	})
-
-	const selected = new Style({
-		stroke: new Stroke({
-			color: 'yellow',
-			width: 4
-		}),
-		fill: new Fill({
-			color: 'yellow'
-		}),
-		zIndex: 5
-	})
-
-	const selectable = new Style({
-		stroke: new Stroke({
-			color: 'yellow',
-			width: 4
-		}),
-		fill: new Fill({
-			color: 'rgba(0, 255, 255, 0)'
-		}),
-		zIndex: 4
-	})
 
 	// Function to fetch external jsons
 
@@ -146,14 +114,14 @@
 				properties.fill && properties.fill.includes('rgba')
 					? properties.fill
 					: properties.fill && properties.fill.includes('#')
-					? convertHexToRGBA(properties.fill, fillOpacity)
+					? $hexToRGBA(properties.fill, fillOpacity)
 					: `rgba(255, 255, 0, ${fillOpacity})`
 
 			let strokeColor =
 				properties.stroke && properties.stroke.includes('rgba')
 					? properties.stroke
 					: properties.stroke && properties.stroke.includes('#')
-					? convertHexToRGBA(properties.stroke, strokeOpacity)
+					? $hexToRGBA(properties.stroke, strokeOpacity)
 					: `rgba(255, 255, 0, ${strokeOpacity})`
 
 			let strokeWidth = 'stroke-width' in properties ? properties['stroke-width'] : 2
@@ -180,7 +148,7 @@
 			feature.setStyle(customStyle)
 
 			if (properties.project) {
-				feature.setStyle(selectable)
+				feature.setStyle($selectableStyles)
 			}
 		})
 	}
@@ -258,7 +226,7 @@
 		xyzSource.clear()
 
 		if (slide !== undefined) {
-			view.padding = [0, 400, 0, 0]
+			view.padding = innerWidth > 600 ? [0, 400, 0, 0] : [0, 0, 0, 0]
 			selectedSlide = $slidesByProject[slide][index]
 			slideCount = $slidesByProject[slide].length
 			path = '/projects/' + $slideShowID
@@ -273,16 +241,20 @@
 		await animateView(extent, rotation)
 
 		if (selectedSlide.frontmatter.allmaps && selectedSlide.frontmatter.allmaps.length > 0) {
-			annotations = selectedSlide.frontmatter.allmaps.map((item: any) => {
-				return { path: path + '/annotations/' + item.annotation, ...item }
-			})
+			annotations = selectedSlide.frontmatter.allmaps
+				.filter((item: any) => item.annotation)
+				.map((item: any) => {
+					return { path: path + '/annotations/' + item.annotation, ...item }
+				})
 			addWarpedMapSource(annotations.reverse())
 		}
 
 		if (selectedSlide.frontmatter.geojson && selectedSlide.frontmatter.geojson.length > 0) {
-			geojsons = selectedSlide.frontmatter.geojson.map((item: any) => {
-				return path + '/geojsons/' + item.filename
-			})
+			geojsons = selectedSlide.frontmatter.geojson
+				.filter((item: any) => item.filename)
+				.map((item: any) => {
+					return path + '/geojsons/' + item.filename
+				})
 			addVectorSource(geojsons.reverse())
 		}
 
@@ -305,7 +277,7 @@
 		vectorSource = new VectorSource()
 		vectorLayer = new VectorLayer({
 			source: vectorSource,
-			style: styles,
+			style: $defaultStyles,
 			zIndex: 3
 		})
 
@@ -350,7 +322,7 @@
 				vectorLayer
 			],
 			target: 'ol',
-			controls: []
+			controls: defaultControls().extend([new Rotate()])
 		})
 
 		changeView()
@@ -375,13 +347,13 @@
 					vectorSource.forEachFeature(function (feature) {
 						let properties = feature.getProperties()
 						if (properties.project) {
-							feature.setStyle(selectable)
+							feature.setStyle($selectableStyles)
 						}
 					})
 					map.getTargetElement().style.cursor = ''
 				}
 				if (feature !== undefined && feature.getProperties().project) {
-					feature.setStyle(selected)
+					feature.setStyle($selectedStyles)
 					map.getTargetElement().style.cursor = 'pointer'
 				}
 			})
@@ -425,7 +397,7 @@
 	}
 </script>
 
-<svelte:window bind:innerHeight on:keydown={onKeyDown} on:keyup={onKeyUp} />
+<svelte:window bind:innerHeight bind:innerWidth on:keydown={onKeyDown} on:keyup={onKeyUp} />
 
 <svelte:head>
 	<title>City Atlas</title>
@@ -444,8 +416,8 @@
 			>
 				{about === false ? 'About' : 'Back to overview'}
 			</span>
-		{:else}
-			<span class="float grey">About</span>
+			<!-- {:else}
+			<span class="float grey">About</span> -->
 		{/if}
 	</div>
 	{#if about}
@@ -489,17 +461,10 @@
 		height: 100vh;
 	}
 
-	@media all and (max-width: 600px) {
-		.grid-container {
-			display: grid;
-			grid-template-columns: [panel] 1fr;
-			grid-template-rows: [header] 40px [map] 1fr;
-			width: 100vw;
-			height: 100vh;
-		}
-		.hidden {
-			display: none;
-		}
+  :global(.ol-rotate) {
+		left: 0.5em;
+		top: 4em;
+		right: auto;
 	}
 
 	.header {
@@ -533,5 +498,23 @@
 
 	.part {
 		grid-column: 1 / 4;
+	}
+
+	@media all and (max-width: 600px) {
+		.grid-container {
+			display: grid;
+			grid-template-columns: [panel] 1fr;
+			grid-template-rows: [header] 40px [map] 1fr;
+			width: 100vw;
+			height: 100vh;
+		}
+		.hidden {
+			display: none;
+		}
+		:global(.ol-rotate) {
+      left: auto;
+			right: 0.5em;
+			top: 0.5em;
+		}
 	}
 </style>

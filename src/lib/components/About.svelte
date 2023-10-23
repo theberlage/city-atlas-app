@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { homePage } from '$lib/components/stores'
+	import { homePage } from '$lib/shared/slides'
 </script>
 
 <div class="about">
