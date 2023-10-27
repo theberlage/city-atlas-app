@@ -29,6 +29,8 @@
 		xyz = selectedSlide.frontmatter.xyz?.url ? selectedSlide.frontmatter.xyz : undefined
 	}
 
+  console.log($page)
+
 	function goNext() {
 		if ($slideIndex < slideCount - 1) {
 			slideIndex.update((n) => n + 1)
@@ -121,7 +123,7 @@
 									{/if}
 									<a
 										href={allmapsViewer +
-											$page.url.href +
+											$page.url.origin +
 											selectedSlide.path +
 											'annotations/' +
 											annotation.annotation}>Open in Allmaps</a
