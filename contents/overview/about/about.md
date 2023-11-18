@@ -46,7 +46,7 @@ allmaps:
       hardness: 
     colorize: "#570a0a"
   - label: vijzelstraat
-    annotation: vijzelstraat-map0.json
+    annotation: 0-vijzelstraat-pinkmap.json
     opacity: 100
     saturation: 100
     removeBackground:
