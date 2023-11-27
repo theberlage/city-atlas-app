@@ -64,7 +64,7 @@ allmaps:
       hardness: 
     colorize: "#570a0a"
 mapbox:
-  styleUrl: 'mapbox://styles/momokb/clnk6ph24000601pg4qsmdsq4'
+  styleUrl: 'mapbox://styles/momokb/clph6wsec00ja01pagka0ge04'
   accessToken: 'pk.eyJ1IjoibW9tb2tiIiwiYSI6ImNsbmJxcGtrODBkYnUyaXI3Yjl2ODR1NTkifQ.OvugAnw_FwWro66sJ7Rl5A'
 ---
 ## Project NL
