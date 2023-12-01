@@ -25,8 +25,8 @@
 
 	// Stores
 
-	import { slidesByProject, slideShowID, slideIndex, homePage } from '$lib/shared/slides'
-	import { hexToRGBA, defaultStyles, selectableStyles, selectedStyles } from '$lib/shared/styles'
+	import { slidesByProject, slideShowID, slideIndex, homePage } from '$lib/shared/slides.js'
+	import { hexToRGBA, defaultStyles, selectableStyles, selectedStyles } from '$lib/shared/styles.js'
 
 	// Allmaps
 
@@ -306,19 +306,6 @@
 
 		changeView()
 
-		// if ($page.url.searchParams.has('project')) {
-		//   let project: string = $page.url.searchParams.get('project')
-		//   if ($slidesByProject[project]) {
-		//     slideShowID.set(project)
-		//     let slide: number = $page.url.searchParams.get('slide')
-		//     let slideCount = $slidesByProject[$slideShowID].length
-		//     if (slide >= 0 && slide <= slideCount) {
-		//       slideIndex.set(slide)
-		//     }
-		//     changeView()
-		//   }
-		// }
-
 		map.on('pointermove', function (event) {
 			vectorLayer.getFeatures(event.pixel).then(function (features) {
 				let feature = features.length ? features[0] : undefined
@@ -344,8 +331,7 @@
 				if (feature !== undefined) {
 					const properties = feature.getProperties()
 					if (properties.project) {
-						slideShowID.set(properties.project)
-						changeView()
+						window.location.hash = '#/project/' + properties.project + '/1'
 					}
 				}
 			})
@@ -353,10 +339,15 @@
 	})
 
 	function goHome() {
-		slideShowID.set(undefined)
-		slideIndex.set(0)
-		about = false
-		changeView()
+		window.location.hash = '#/'
+	}
+
+	function goAbout() {
+		if (about) {
+			window.location.hash = '#/'
+		} else {
+			window.location.hash = '#/about'
+		}
 	}
 
 	let bear: boolean = false
@@ -374,9 +365,40 @@
 				bear = false
 		}
 	}
+
+	function routeChange() {
+		const hashArray = location.hash.split('/')
+		if (hashArray.length >= 1) {
+			if (hashArray[1] === 'project' && $slidesByProject[hashArray[2]]) {
+				const index =
+					hashArray[3] &&
+					+hashArray[3] <= $slidesByProject[hashArray[2]].length &&
+					+hashArray[3] > 0
+						? +hashArray[3] - 1
+						: 0
+				slideShowID.set(hashArray[2])
+				slideIndex.set(index)
+			} else if (hashArray[1] === 'about') {
+				slideShowID.set(undefined)
+				slideIndex.set(0)
+				about = true
+			} else {
+				slideShowID.set(undefined)
+				slideIndex.set(0)
+				about = false
+			}
+		}
+		changeView()
+	}
 </script>
 
-<svelte:window bind:innerHeight bind:innerWidth on:keydown={onKeyDown} on:keyup={onKeyUp} />
+<svelte:window
+	bind:innerHeight
+	bind:innerWidth
+	on:keydown={onKeyDown}
+	on:keyup={onKeyUp}
+	on:hashchange={routeChange}
+/>
 
 <svelte:head>
 	<title>City Atlas</title>
@@ -388,22 +410,16 @@
 			<span class="hidden">The Berlage: </span>City Atlas</span
 		>
 		{#if $slideShowID === undefined}
-			<span
-				class="float link"
-				on:click={() => (about = !about)}
-				on:keypress={() => (about = !about)}
-			>
+			<span class="float link" on:click={() => goAbout()} on:keypress={() => goAbout()}>
 				{about === false ? 'About' : 'Back to overview'}
 			</span>
-			<!-- {:else}
-			<span class="float grey">About</span> -->
 		{/if}
 	</div>
 	{#if about}
 		<About />
 	{/if}
 	{#if $slideShowID !== undefined}
-		<Slideshow on:changeView={changeView} />
+		<Slideshow />
 	{/if}
 	{#if bear}
 		<Bearlage />
@@ -440,7 +456,7 @@
 		height: 100vh;
 	}
 
-  :global(.ol-rotate) {
+	:global(.ol-rotate) {
 		left: 0.5em;
 		top: 4em;
 		right: auto;
@@ -491,7 +507,7 @@
 			display: none;
 		}
 		:global(.ol-rotate) {
-      left: auto;
+			left: auto;
 			right: 0.5em;
 			top: 0.5em;
 		}
