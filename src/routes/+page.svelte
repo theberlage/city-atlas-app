@@ -243,6 +243,31 @@
 		}
 	}
 
+	function routeChange() {
+		const hashArray = location.hash.split('/')
+		if (hashArray.length >= 1) {
+			if (hashArray[1] === 'project' && $slidesByProject[hashArray[2]]) {
+				const index =
+					hashArray[3] &&
+					+hashArray[3] <= $slidesByProject[hashArray[2]].length &&
+					+hashArray[3] > 0
+						? +hashArray[3] - 1
+						: 0
+				slideShowID.set(hashArray[2])
+				slideIndex.set(index)
+			} else if (hashArray[1] === 'about') {
+				slideShowID.set(undefined)
+				slideIndex.set(0)
+				about = true
+			} else {
+				slideShowID.set(undefined)
+				slideIndex.set(0)
+				about = false
+			}
+		}
+		changeView()
+	}
+
 	// onMount function after components are loaded, see https://svelte.dev/tutorial/onmount
 
 	onMount(async () => {
@@ -304,7 +329,7 @@
 			controls: defaultControls().extend([new Rotate()])
 		})
 
-		changeView()
+		routeChange()
 
 		map.on('pointermove', function (event) {
 			vectorLayer.getFeatures(event.pixel).then(function (features) {
@@ -364,31 +389,6 @@
 			case 66:
 				bear = false
 		}
-	}
-
-	function routeChange() {
-		const hashArray = location.hash.split('/')
-		if (hashArray.length >= 1) {
-			if (hashArray[1] === 'project' && $slidesByProject[hashArray[2]]) {
-				const index =
-					hashArray[3] &&
-					+hashArray[3] <= $slidesByProject[hashArray[2]].length &&
-					+hashArray[3] > 0
-						? +hashArray[3] - 1
-						: 0
-				slideShowID.set(hashArray[2])
-				slideIndex.set(index)
-			} else if (hashArray[1] === 'about') {
-				slideShowID.set(undefined)
-				slideIndex.set(0)
-				about = true
-			} else {
-				slideShowID.set(undefined)
-				slideIndex.set(0)
-				about = false
-			}
-		}
-		changeView()
 	}
 </script>
 
