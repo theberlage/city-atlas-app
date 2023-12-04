@@ -29,32 +29,26 @@
 		xyz = selectedSlide.frontmatter.xyz?.url ? selectedSlide.frontmatter.xyz : undefined
 	}
 
-  console.log($page)
-
 	function goNext() {
 		if ($slideIndex < slideCount - 1) {
-			slideIndex.update((n) => n + 1)
+			const index = $slideIndex + 2
+			window.location.hash = '#/project/' + $slideShowID + '/' + index
 		} else if ($slideIndex === slideCount - 1) {
-			slideShowID.set(undefined)
-			slideIndex.set(0)
+			window.location.hash = '#/'
 		}
-		dispatch('changeView')
 	}
 
 	function goPrev() {
 		if ($slideIndex > 0) {
-			slideIndex.update((n) => n - 1)
+			const index = $slideIndex
+			window.location.hash = '#/project/' + $slideShowID + '/' + index
 		} else if ($slideIndex === 0) {
-			slideShowID.set(undefined)
-			slideIndex.set(0)
+			window.location.hash = '#/'
 		}
-		dispatch('changeView')
 	}
 
 	function goHome() {
-		slideShowID.set(undefined)
-		slideIndex.set(0)
-		dispatch('changeView')
+		window.location.hash = '#/'
 	}
 
 	// up = 38
