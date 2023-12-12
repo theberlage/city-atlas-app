@@ -1,0 +1,106 @@
+{
+  "type": "AnnotationPage",
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld"
+  ],
+  "items": [
+    {
+      "id": "bd537451ca5bb3fe",
+      "type": "Annotation",
+      "@context": [
+        "http://www.w3.org/ns/anno.jsonld",
+        "http://geojson.org/geojson-ld/geojson-context.jsonld",
+        "http://iiif.io/api/presentation/3/context.json"
+      ],
+      "motivation": "georeferencing",
+      "target": {
+        "type": "Image",
+        "source": "https://dlc.services/iiif-img/7/34/490935ca9d27db94341aff6ae56b11f2/full/full/0/default.jpg",
+        "service": [
+          {
+            "@id": "https://dlc.services/iiif-img/7/34/490935ca9d27db94341aff6ae56b11f2",
+            "type": "ImageService2"
+          }
+        ],
+        "selector": {
+          "type": "SvgSelector",
+          "value": "<svg width=\"3045\" height=\"4311\"><polygon points=\"13,2453 113,2351 113,2315 3,2199 20,2128 24,2106 37,2089 96,2138 99,1804 794,1084 1175,1037 1568,1892 1566,2336 1648,2417 1649,2386 1690,2427 1719,2598 1737,2704 1736,2856 1726,2865 1551,2683 1552,3054 1517,3053 1517,2595 1326,2786 1327,3254 1327,3273 1293,3274 1296,2818 1107,3006 1104,3496 1071,3494 1074,3034 884,3227 882,3715 849,3716 852,3259 826,3282 680,3134 531,3285 519,3277 503,3262 494,3235 491,3210 498,3194 620,3077 145,2601 143,2974 113,2973 113,2569 15,2469\" /></svg>"
+        }
+      },
+      "body": {
+        "type": "FeatureCollection",
+        "purpose": "gcp-georeferencing",
+        "transformation": {
+          "type": "polynomial",
+          "order": 0
+        },
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                864,
+                3183
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.882815,
+                52.3922265
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                122,
+                2435
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.8826963,
+                52.3921681
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                1536,
+                2510
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.8827228,
+                52.3922991
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "pixelCoords": [
+                797,
+                1768
+              ]
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.8825958,
+                52.392242
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
