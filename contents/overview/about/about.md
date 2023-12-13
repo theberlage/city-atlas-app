@@ -7,8 +7,18 @@ viewer:
 geojson:
   - filename: locations.geojson
     label: Locations
+  - filename: mothermap.geojson
+    label: Locations
 xyz:
 allmaps:
+  - label: Mother Map Biljmeer
+    annotation: MotherMap_Biljmeer.json
+    opacity: 100
+    saturation: 100
+  - label: Mother Map
+    annotation: MotherMap.json
+    opacity: 100
+    saturation: 100
   - label: Uilenburg
     annotation: 
     opacity: 100
