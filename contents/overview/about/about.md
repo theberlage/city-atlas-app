@@ -5,8 +5,8 @@ viewer:
   bbox: [4.806266,52.296147,5.027182,52.417977]
   rotation: 140
 geojson:
-  - filename: locations.geojson
-    label: Locations
+  - filename:
+    label:
   - filename: mothermap.geojson
     label: Locations
 xyz:
