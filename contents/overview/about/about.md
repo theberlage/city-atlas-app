@@ -7,8 +7,8 @@ viewer:
 geojson:
   - filename: locations.geojson
     label: Locations
-  - filename: 
-    label: 
+  - filename: mothermap.geojson
+    label: Locations
 xyz:
 allmaps:
   - label: Mother Map Biljmeer
