@@ -2,17 +2,17 @@
 meta:
   heading: Vijzelstraat
 viewer:
-  bbox: [44.889995,52.364033,4.893934,52.365721]
+  bbox: [4.887058,52.361729,4.897884,52.365767]
   rotation: 20
 allmaps:
   - label: 1:1000
     annotation: 1.1000.json
-    opacity: 100
+   opacity: 100
     saturation: 100
 geojson:
  - filename: 1.200mask.geojson
 legend:
- - label: 16th - 18th century
+  - label: 16th - 18th century
     fill: '#ffffff'
     fill-opacity: 1
     stroke: '#ED1C24'
