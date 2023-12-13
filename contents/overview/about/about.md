@@ -5,10 +5,20 @@ viewer:
   bbox: [4.806266,52.296147,5.027182,52.417977]
   rotation: 140
 geojson:
-  - filename: locations.geojson
+  - filename:
+    label:
+  - filename: mothermap.geojson
     label: Locations
 xyz:
 allmaps:
+  - label: Mother Map Biljmeer
+    annotation: MotherMap_Biljmeer.json
+    opacity: 100
+    saturation: 100
+  - label: Mother Map
+    annotation: MotherMap.json
+    opacity: 100
+    saturation: 100
   - label: Uilenburg
     annotation: 
     opacity: 100
