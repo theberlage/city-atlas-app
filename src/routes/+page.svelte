@@ -184,7 +184,7 @@
 			resolution,
 			rotation
 		})
-		// await sleep(duration)
+		await sleep(duration)
 	}
 
 	// Function to change layers and view depending on state
