@@ -7,7 +7,8 @@
 		mapBoxLayer as mapboxSettings,
 		selectedSlideData as selectedSlide,
 		georefAnnotations as newWarpedMapSource,
-		vectorLayers as newVectorSource
+		vectorLayers as newVectorSource,
+		black
 	} from '$lib/shared/stores/selectedSlide.js'
 
 	// Shared functions
@@ -74,12 +75,14 @@
 		const collection = new Collection()
 		const zoomIn = new Zoom({
 			zoomInLabel: stringToHTML(plus),
-			zoomOutLabel: stringToHTML(minus)
-			// className: 'custom-control'
+			zoomOutLabel: stringToHTML(minus),
+			target: 'controls',
+			className: 'zoom'
 		})
 		const rotate = new Rotate({
-			label: stringToHTML(arrowUp)
-			// className: 'custom-control'
+			label: stringToHTML(arrowUp),
+			target: 'controls',
+			className: 'rotate'
 		})
 		collection.extend([zoomIn, rotate])
 		return collection
@@ -126,6 +129,12 @@
 				else {
 					xyzSource.setUrl(url)
 					console.log('Added XYZ layer')
+				}
+				if (url.includes('https://allmaps.xyz/')) {
+					console.warn(
+						'Allmaps XYZ tile proxy is used; please add the map as a Georeference Annotation',
+						url
+					)
 				}
 				currentXyzSource = url
 			} else if (currentXyzSource) {
@@ -371,6 +380,8 @@
 
 <div id="ol" class="map" />
 
+<div id="controls" class:black={$black} />
+
 <style>
 	.map {
 		grid-column: 1 / 5;
@@ -381,14 +392,36 @@
 		z-index: 1;
 	}
 
+	#controls {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		z-index: 2;
+		margin-left: 1rem;
+		width: 2rem;
+		align-self: start;
+	}
+
+	.black {
+		& .ol-control {
+			& button {
+				color: black;
+				&:hover {
+					color: rgba(255, 255, 114);
+				}
+			}
+		}
+	}
+
 	:global(.ol-control) {
 		background: none;
+		position: relative;
 		& button {
 			background: none;
 			border: none;
 			color: white;
 			height: 2rem;
 			width: 2rem;
+			cursor: pointer;
 			& svg {
 				height: 1.5rem;
 				width: 1.5rem;
@@ -406,22 +439,6 @@
 		}
 	}
 
-	:global(.ol-zoom) {
-		top: 3rem;
-		left: 1rem;
-	}
-
-	:global(.ol-rotate) {
-		left: 1rem;
-		top: 7rem;
-		right: auto;
-	}
-
 	@media all and (max-width: 600px) {
-		:global(.ol-rotate) {
-			/* left: auto;
-			right: 0.5em;
-			top: 0.5em; */
-		}
 	}
 </style>

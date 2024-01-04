@@ -1,21 +1,13 @@
 <script lang="ts">
 	import { menu } from '$lib/shared/stores/componentStates.js'
-	import { selectedChapter } from '$lib/shared/stores/selectedSlide.js'
+	import { selectedChapter, black } from '$lib/shared/stores/selectedSlide.js'
 	import Page from '../../routes/+page.svelte'
 	import { bars, close } from '$lib/shared/svgs.js'
 	const toggleMenu = () => menu.toggle()
-
-	let black: boolean = false
-
-	$: {
-		if ($selectedChapter === 'documentation') {
-			black = true
-		} else black = false
-	}
 </script>
 
-<div class="header" class:black>
-	<a href="#/" class:black><span class="hidden">The Berlage: </span>City Atlas</a>
+<div class="header" class:black={$black}>
+	<a href="#/" class:black={$black}><span class="hidden">The Berlage: </span>City Atlas</a>
 	<div class="float link" on:click={toggleMenu} on:keypress={toggleMenu}>
 		{#if $menu}{@html close}{:else}{@html bars}{/if}
 	</div>

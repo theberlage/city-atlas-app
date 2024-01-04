@@ -27,6 +27,10 @@ const selectedChapterData = derived(
 	}
 )
 
+export const black = derived(selectedChapter, ($selectedChapter) =>
+	$selectedChapter === 'argumentation' ? false : true
+)
+
 const selectedSlideShowData = derived(
 	[selectedChapterData, selectedSlideShow],
 	([$selectedChapterData, $selectedSlideShow], set) => {
