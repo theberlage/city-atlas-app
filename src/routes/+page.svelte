@@ -4,7 +4,7 @@
 	import { page } from '$app/stores'
 
 	// Stores
-	import { menu } from '$lib/shared/stores/componentStates.js'
+	import { menu, panel } from '$lib/shared/stores/componentStates.js'
 	import { hash } from '$lib/shared/stores/hashRouter.js'
 	import { selectedSlideData as data } from '$lib/shared/stores/selectedSlide.js'
 
@@ -17,6 +17,12 @@
 
 	let innerHeight: number
 	let innerWidth: number
+
+	$: if (innerWidth > 600) {
+		panel.set(true)
+	} else {
+		panel.set(false)
+	}
 
 	onMount(async () => {
 		hash.set(location.hash)
@@ -36,7 +42,7 @@
 	{/if}
 	<Map />
 	<Controls />
-	{#if $data}
+	{#if $data && $panel}
 		<SidePanel />
 	{/if}
 </div>
@@ -47,9 +53,10 @@
 	.grid-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr [panel] 400px;
-		grid-template-rows: [header] 45px [map] 1fr;
+		grid-template-rows: [header] 3rem [map] 1fr;
 		width: 100vw;
 		height: 100vh;
+		/* gap: 1rem; */
 		/* position: absolute;
     left: 0;
     top: 0; */
@@ -71,7 +78,7 @@
 		.grid-container {
 			display: grid;
 			grid-template-columns: [panel] 1fr;
-			grid-template-rows: [header] 45px [map] 1fr;
+			grid-template-rows: [header] 3rem [map] 1fr;
 			width: 100vw;
 			height: 100vh;
 		}

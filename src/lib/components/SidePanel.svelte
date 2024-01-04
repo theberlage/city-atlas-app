@@ -119,12 +119,13 @@
 		grid-row: map;
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr [controls] 100px;
+		/* grid-template-rows: 1fr [controls] 100px; */
+		grid-template-rows: 1fr;
 		min-width: 0;
 		min-height: 0;
 		/* border-left: 1px solid lightgray; */
-		border-radius: 10px;
-		margin: 0px 15px 15px 15px;
+		border-radius: 1rem;
+		margin: 0 1rem 1rem 0;
 	}
 
 	ul {
@@ -146,8 +147,8 @@
 		overflow: auto;
 		z-index: 2;
 		line-height: 1.3;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 	.hidden {

@@ -387,8 +387,8 @@
 			background: none;
 			border: none;
 			color: white;
-			height: 1.5rem;
-			width: 1.5rem;
+			height: 2rem;
+			width: 2rem;
 			& svg {
 				height: 1.5rem;
 				width: 1.5rem;
@@ -407,13 +407,13 @@
 	}
 
 	:global(.ol-zoom) {
-		top: 45px;
-		left: 15px;
+		top: 3rem;
+		left: 1rem;
 	}
 
 	:global(.ol-rotate) {
-		left: 15px;
-		top: 105px;
+		left: 1rem;
+		top: 7rem;
 		right: auto;
 	}
 

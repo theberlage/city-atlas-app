@@ -51,33 +51,45 @@
 <svelte:window on:keydown={onKeyDown} />
 
 <div class="control">
-	<div class="content">
+	<div class="flex-container">
 		{#if $count > 1}
-			<span class="link" on:click={() => goPrev()}>{@html prev}</span>
+			<div class="flex-item link" on:click={() => goPrev()} on:keypress={() => goPrev()}>
+				{@html prev}
+			</div>
 			Slide {$index + 1} of {$count}
-			<span class="link" on:click={() => goNext()}>{@html next}</span>
+			<div class="flex-item link" on:click={() => goNext()} on:keypress={() => goNext()}>
+				{@html next}
+			</div>
 		{:else}
-			<span>Click a location to start a slideshow</span>
+			<div class="flex-item">Click a location to start a slide show</div>
 		{/if}
 	</div>
 </div>
 
 <style>
 	.control {
-		grid-column: 2 / 3;
+		grid-column: 1 / 4;
 		grid-row: 2 / 3;
-		background-color: rgba(255, 255, 114);
-		/* height: 40px; */
-		bottom: 0px;
 		z-index: 2;
-		border-radius: 10px;
-		margin: 15px auto;
-		padding: 10px;
+		margin: 1rem auto;
 		align-self: end;
 	}
-	.content {
+	.flex-container {
 		font-size: 1.2rem;
-		margin: auto;
+		border-radius: 1rem;
+		background-color: rgba(255, 255, 114);
+		padding: 0.4rem;
+		margin: 0 1rem;
+		/* width: auto; */
+		/* margin: auto; */
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.flex-item {
+		padding: 0rem 0.6rem;
 	}
 
 	.link {
@@ -88,7 +100,8 @@
 
 	@media all and (max-width: 600px) {
 		.control {
-			width: 100%;
+			grid-column: 1 / 2;
+			/* width: 100%; */
 		}
 	}
 </style>
