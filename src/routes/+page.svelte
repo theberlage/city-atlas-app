@@ -42,6 +42,8 @@
 </div>
 
 <style>
+	@import '../app.css';
+
 	.grid-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr [panel] 400px;
