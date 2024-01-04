@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ZurichBT';
-  src: url('assets/ZurichBT-Regular.woff') format('woff');
+  src: url('%assets%/assets/ZurichBT-Regular.woff') format('woff');
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
