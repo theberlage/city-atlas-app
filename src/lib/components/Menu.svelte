@@ -33,10 +33,11 @@
 		background-color: rgba(0, 0, 0, 0.6);
 		padding-left: 20px;
 		padding-right: 20px;
+		padding-top: 3rem;
 		min-width: 0;
 		min-height: 0;
 		overflow: auto;
-		z-index: 3;
+		z-index: 5;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -10,6 +10,7 @@
 		vectorLayers as newVectorSource,
 		black
 	} from '$lib/shared/stores/selectedSlide.js'
+	import { panel } from '$lib/shared/stores/componentStates.js'
 
 	// Shared functions
 	import { calculateExtent, sleep, hexToRGBA, stringToHTML } from '$lib/shared/utils.js'
@@ -101,8 +102,10 @@
 	}
 
 	$: {
-		if (view) {
-			view.padding = innerWidth > 600 ? [0, 400, 0, 0] : [0, 0, 0, 0]
+		if (view && innerWidth > 600) {
+			view.padding = $panel ? [0, 400, 0, 0] : [0, 0, 0, 0]
+		} else if (view) {
+			view.padding = [0, 0, 0, 0]
 		}
 	}
 

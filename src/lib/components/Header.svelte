@@ -21,7 +21,7 @@
 		padding: 15px;
 		font-size: 1.2rem;
 		/* border-bottom: 1px solid lightgrey; */
-		z-index: 4;
+		z-index: 6;
 		color: white;
 	}
 	.black {

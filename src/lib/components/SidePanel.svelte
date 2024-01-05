@@ -111,10 +111,10 @@
 <style>
 	.panel {
 		background-color: rgba(255, 255, 114);
-		z-index: 2;
 	}
 
 	.panel-grid-container {
+		z-index: 3;
 		grid-column: panel;
 		grid-row: map;
 		display: grid;
@@ -151,9 +151,9 @@
 		padding-right: 1rem;
 	}
 
-	.hidden {
+	/* .hidden {
 		display: none;
-	}
+	} */
 
 	.body {
 		/* hyphens: auto;
@@ -233,16 +233,19 @@
 	}
 
 	@media all and (max-width: 600px) {
-		.panel {
-			align-self: end;
-			min-width: 0;
-			min-height: 0;
-			max-height: 80%;
-		}
 		.panel-grid-container {
-			grid-template-rows: 1fr [controls] 100px;
+			grid-template-rows: 1 / 3;
 			/* border-top: 1px solid lightgray; */
 			border-left: none;
+			border-radius: 1rem 1rem 0 0;
+		}
+		.panel {
+			width: 100%;
+			height: 100%;
+			background-color: white;
+		}
+		.body {
+			padding-bottom: 4.2rem;
 		}
 		.project {
 			font-size: 1rem;
