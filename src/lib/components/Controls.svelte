@@ -73,7 +73,7 @@
 		{:else}
 			<div class="grid-item start">Click a location to start a slide show</div>
 		{/if}
-		<div class:panel-overview={overview} class="grid-item panel">
+		<div class:panel-overview={overview} class="grid-item panel button">
 			<button on:click={togglePanel}>
 				<body>
 					{#if $panel}Hide{:else}Show{/if} description
@@ -152,15 +152,6 @@
 		grid-column: center;
 		grid-row: bottom;
 		text-align: center;
-		& button {
-			width: 100%;
-			height: 100%;
-			background: none;
-			border: none;
-			&:hover {
-				background: rgba(0, 0, 0, 0.2);
-			}
-		}
 	}
 	.panel-overview {
 		& button {
