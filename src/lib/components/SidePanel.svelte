@@ -236,13 +236,14 @@
 		.panel-grid-container {
 			grid-template-rows: 1 / 3;
 			/* border-top: 1px solid lightgray; */
-			border-left: none;
 			border-radius: 1rem 1rem 0 0;
+			margin: 0;
 		}
 		.panel {
 			width: 100%;
 			height: 100%;
 			background-color: white;
+			/* align-self: end; */
 		}
 		.body {
 			padding-bottom: 4.2rem;

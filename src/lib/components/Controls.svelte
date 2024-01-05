@@ -118,6 +118,7 @@
 			height: 100%;
 			background: none;
 			border: none;
+			color: black;
 		}
 	}
 
