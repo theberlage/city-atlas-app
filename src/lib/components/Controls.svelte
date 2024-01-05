@@ -125,11 +125,13 @@
 	.count {
 		grid-column: center;
 		grid-row: top;
+		text-align: center;
 	}
 
 	.panel {
 		grid-column: center;
 		grid-row: bottom;
+		text-align: center;
 	}
 
 	.start {
