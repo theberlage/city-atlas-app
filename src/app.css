@@ -47,6 +47,6 @@ em {
   font-style: normal;
 }
 
-.icon {
-  height: 1.2rem;
+button {
+  cursor: pointer;
 }

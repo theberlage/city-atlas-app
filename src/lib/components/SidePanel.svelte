@@ -6,6 +6,7 @@
 	} from '$lib/shared/stores/selectedSlide.js'
 	import { hexToRGBA } from '$lib/shared/utils.js'
 	import { page } from '$app/stores'
+	import { fade } from 'svelte/transition'
 
 	let innerWidth: number
 	$: hidden = innerWidth > 600 ? false : true
@@ -29,7 +30,7 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="panel panel-grid-container">
+<div class="panel-grid-container" transition:fade>
 	<div class="description">
 		<p class="project">
 			{data.meta.heading}
@@ -95,180 +96,86 @@
 			{/if}
 		</div>
 	</div>
-	<!-- <div class="control-container">
-		<button class="control-item hideshow" on:click={() => (hidden = !hidden)}>
-			{hidden === false ? 'Hide text' : 'Show text'}
-		</button>
-		<button class="control-item" on:click={goNext}>
-			{$slideIndex === slideCount - 1 ? 'Back to overview' : 'Next slide'}
-		</button>
-		<button class="control-item" on:click={goPrev}>
-			{$slideIndex === 0 ? 'Back to overview' : 'Previous slide'}
-		</button>
-	</div> -->
 </div>
 
 <style>
-	.panel {
-		background-color: rgba(255, 255, 114);
-	}
-
 	.panel-grid-container {
+		background-color: rgba(255, 255, 114);
 		z-index: 3;
 		grid-column: panel;
 		grid-row: map;
 		display: grid;
 		grid-template-columns: 1fr;
-		/* grid-template-rows: 1fr [controls] 100px; */
 		grid-template-rows: 1fr;
 		min-width: 0;
 		min-height: 0;
-		/* border-left: 1px solid lightgray; */
 		border-radius: 1rem;
-		margin: 0 1rem 1rem 0;
+		margin: 0.4rem 1rem 1rem 0;
 	}
-
 	ul {
 		font-size: 0.8rem;
 	}
-
 	ul > li {
 		padding-bottom: 1rem;
 	}
-
 	ul > li > a {
 		border-bottom: 1px solid black;
 		color: black;
 	}
-
 	.description {
 		grid-column: 1 / 2;
 		grid-row: 1 / 3;
 		overflow: auto;
 		z-index: 2;
 		line-height: 1.3;
+		margin: 1rem 0;
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
-
-	/* .hidden {
-		display: none;
-	} */
-
-	.body {
-		/* hyphens: auto;
-		text-align: justify;
-		text-justify: inter-word; */
-	}
-
 	.project {
 		font-size: 0.8rem;
 	}
-
-	.control-container {
-		grid-column: 1 / 2;
-		grid-row: controls;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-items: flex-start;
-		z-index: 3;
-		border-top: 1px solid lightgray;
-	}
-
-	.control-item {
-		height: 50%;
-		width: 100%;
-		background-color: transparent;
-		border: none;
-		font-size: 1rem;
-		color: blue;
-	}
-
-	.control-item:hover {
-		background-color: lightgray;
-	}
-
-	.control-item:last-child {
-		border-top: 1px solid lightgray;
-	}
-
-	.hideshow {
-		display: none;
-	}
-
 	.sub-title {
 		text-transform: uppercase;
 		font-size: 0.8rem;
 	}
-
 	dl.legend {
 		font-size: 0.8rem;
 		display: flex;
 		flex-flow: row wrap;
 	}
-
 	dl.legend > dt {
 		flex-basis: 10%;
 		padding: 5px 0px;
 		margin: 0;
 	}
-
 	dl.legend > dd {
 		flex-basis: 90%;
 		flex-grow: 1;
 		margin: 0;
 		padding: 5px 0px;
 	}
-
 	dl.legend::after {
 		clear: left;
 	}
-
 	.legend-item {
 		width: 12px;
 		height: 12px;
 		outline-width: 2px;
 		outline-style: solid;
 	}
-
 	@media all and (max-width: 600px) {
 		.panel-grid-container {
 			grid-template-rows: 1 / 3;
-			/* border-top: 1px solid lightgray; */
 			border-radius: 1rem 1rem 0 0;
-			margin: 0;
-		}
-		.panel {
-			width: 100%;
-			height: 100%;
+			margin: 0.4rem 0.4rem 0 0.4rem;
 			background-color: white;
-			/* align-self: end; */
 		}
 		.body {
 			padding-bottom: 4.2rem;
 		}
 		.project {
 			font-size: 1rem;
-		}
-		.control-container {
-			flex-direction: row-reverse;
-		}
-		.control-item {
-			height: 50%;
-			width: 50%;
-		}
-		.control-item:last-child {
-			border-right: 1px solid lightgray;
-			border-top: none;
-		}
-		.control-item:first-child {
-			border-bottom: 1px solid lightgray;
-		}
-		.hideshow {
-			display: block;
-			width: 100%;
-			height: 50%;
 		}
 	}
 </style>

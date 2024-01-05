@@ -399,7 +399,7 @@
 		grid-column: 1 / 2;
 		grid-row: 2 / 3;
 		z-index: 2;
-		margin-left: 1rem;
+		margin: 0.4rem 0 0 1rem;
 		width: 2rem;
 		align-self: start;
 	}
@@ -425,6 +425,7 @@
 			height: 2rem;
 			width: 2rem;
 			cursor: pointer;
+			border-radius: 0.2rem;
 			& svg {
 				height: 1.5rem;
 				width: 1.5rem;
@@ -432,12 +433,14 @@
 			&:hover {
 				text-decoration: none;
 				outline: none;
-				color: rgba(255, 255, 114);
+				color: white;
+				background: rgba(0, 0, 0, 0.2);
 			}
 			&:focus {
 				text-decoration: none;
 				outline: none;
 				color: rgba(255, 255, 114);
+				/* background: rgba(0, 0, 0, 0.2); */
 			}
 		}
 	}

@@ -2,11 +2,12 @@
 	import { createEventDispatcher } from 'svelte'
 	import { slideData } from '$lib/shared/stores/markdownSlides.js'
 	import { menu } from '$lib/shared/stores/componentStates.js'
+	import { fade } from 'svelte/transition'
 
 	const toggleMenu = () => menu.toggle()
 </script>
 
-<div class="menu">
+<div class="menu" transition:fade>
 	<div class="body">
 		<p class="project">Menu</p>
 		<div class="html">
