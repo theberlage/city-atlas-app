@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte'
 	import { slideData } from '$lib/shared/stores/markdownSlides.js'
 	import { menu } from '$lib/shared/stores/componentStates.js'
 	import { fade } from 'svelte/transition'

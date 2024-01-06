@@ -20,9 +20,9 @@ selectedSlideIndex.subscribe((value) => {
 
 const selectedChapterData = derived(
 	[slideData, selectedChapter],
-	([$slideData, $selectedChapter], set) => {
+	([$slideData, $selectedChapter]) => {
 		if ($selectedChapter) {
-			set($slideData.get($selectedChapter))
+			return $slideData.get($selectedChapter)
 		}
 	}
 )
@@ -33,28 +33,25 @@ export const black = derived(selectedChapter, ($selectedChapter) =>
 
 const selectedSlideShowData = derived(
 	[selectedChapterData, selectedSlideShow],
-	([$selectedChapterData, $selectedSlideShow], set) => {
-		if ($selectedChapterData) {
-			set($selectedChapterData.get($selectedSlideShow))
+	([$selectedChapterData, $selectedSlideShow]) => {
+		if ($selectedChapterData && $selectedSlideShow) {
+			return $selectedChapterData.get($selectedSlideShow)
 		}
 	}
 )
 
-export const selectedSlideShowCount = derived(
-	selectedSlideShowData,
-	($selectedSlideShowData, set) => {
-		if ($selectedSlideShowData) set($selectedSlideShowData.length)
-	}
-)
+export const selectedSlideShowCount = derived(selectedSlideShowData, ($selectedSlideShowData) => {
+	if ($selectedSlideShowData) return $selectedSlideShowData.length
+})
 
 // Data for the current slide
 // First value is undefined
 export const selectedSlideData = derived(
 	[selectedSlideShowData, selectedSlideIndex],
-	([$selectedSlideShowData, $selectedSlideIndex], set) => {
+	([$selectedSlideShowData, $selectedSlideIndex]) => {
 		// First value of selectedChapter is undefined
 		if ($selectedSlideShowData) {
-			set($selectedSlideShowData[$selectedSlideIndex])
+			return $selectedSlideShowData[$selectedSlideIndex]
 		}
 	}
 )
@@ -137,11 +134,13 @@ export const vectorLayers = derived(selectedSlideData, ($selectedSlideData, set)
 // Settings for mapbox layer taken from first slide of chapter
 export const mapBoxLayer = derived(
 	[slideData, selectedChapter],
-	([$slideData, $selectedChapter], set) => {
+	([$slideData, $selectedChapter]) => {
 		if ($selectedChapter) {
 			const chapterData = $slideData.get($selectedChapter)
-			const firstSlide = chapterData.entries().next().value[1][0].frontmatter.mapbox
-			set(firstSlide)
+			if (chapterData) {
+				const firstSlide = chapterData.entries().next().value[1][0].frontmatter.mapbox
+				return firstSlide
+			}
 		}
 	}
 )

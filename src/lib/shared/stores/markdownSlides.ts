@@ -1,6 +1,7 @@
 import { readable, writable, derived } from 'svelte/store'
 import { groupBy } from 'lodash-es'
-import type { MarkdownSlide } from '$lib/shared/types.js'
+import type { MarkdownSlide, Slide } from '$lib/shared/types.js'
+import { slide } from 'svelte/transition'
 
 // Importing Markdown and frontmatter for slides
 
@@ -8,7 +9,7 @@ const markdownSlides = import.meta.glob<MarkdownSlide>('$contents/data/*/*/slide
 	eager: true
 })
 
-const slidesWithMetadata = Object.entries(markdownSlides).map(([id, slide]) => {
+const slidesWithMetadata: Array<Slide> = Object.entries(markdownSlides).map(([id, slide]) => {
 	let chapter: string = ''
 	let slideshow: string = ''
 	let index: number = -1
@@ -58,4 +59,4 @@ const groupedSlides = groupSlides()
 
 console.log('groupedSlides', groupedSlides)
 
-export const slideData = readable(groupedSlides)
+export const slideData = readable<Map<string, Map<string, Array<Slide>>>>(groupedSlides)

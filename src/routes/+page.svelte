@@ -1,6 +1,6 @@
 <script lang="ts">
+	// Svelte
 	import { onMount } from 'svelte'
-	import { derived } from 'svelte/store'
 	import { page } from '$app/stores'
 
 	// Stores
@@ -50,30 +50,15 @@
 <style>
 	@import '../app.css';
 
+	/* Todo: fix notch on iOS https://css-tricks.com/the-notch-and-css/ */
+
 	.grid-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr [panel] 400px;
 		grid-template-rows: [header] 3rem [map] 1fr;
 		width: 100vw;
 		height: 100vh;
-		/* gap: 1rem; */
-		/* position: absolute;
-    left: 0;
-    top: 0; */
 	}
-
-	.grey {
-		color: grey;
-	}
-
-	.full {
-		grid-column: 1 / 5;
-	}
-
-	.part {
-		grid-column: 1 / 4;
-	}
-
 	@media all and (max-width: 600px) {
 		.grid-container {
 			display: grid;

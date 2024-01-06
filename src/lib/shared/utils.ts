@@ -1,4 +1,5 @@
 import { fromLonLat } from 'ol/proj.js'
+import type { Coordinate } from 'ol/extent'
 
 export function formatNumber(number: number, maximumFractionDigits = 2) {
 	return new Intl.NumberFormat('nl-NL', { maximumFractionDigits }).format(number)
@@ -24,7 +25,7 @@ export function stringToHTML(str: string) {
 
 // From: https://gist.github.com/danieliser/b4b24c9f772066bcf0a6
 
-export function hexToRGBA(hexCode, opacity = 1) {
+export function hexToRGBA(hexCode: string, opacity = 1) {
 	let hex = hexCode.replace('#', '')
 
 	if (hex.length === 3) {

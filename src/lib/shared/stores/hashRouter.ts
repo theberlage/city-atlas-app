@@ -6,9 +6,12 @@ import {
 	selectedSlideIndex as selectedSlideIndexStore,
 	selectedSlideShowCount
 } from '$lib/shared/stores/selectedSlide.js'
+import type { Slide } from '../types.js'
 
 // slideData doesn't change so only get once
 const slideData = get(slideDataStore)
+
+// Hash store
 export const hash = writable<string | undefined>(undefined)
 
 // Parse hash and set stores each time hash changes
@@ -22,8 +25,8 @@ hash.subscribe((value) => {
 function parseHash(hash: string) {
 	const hashArray = hash.split('/')
 	const length = hashArray.length
-	let selectedChapter: Map<string, Array<any>>
-	let selectedSlideShow: Array<any>
+	let selectedChapter: Map<string, Slide[]>
+	let selectedSlideShow: Slide[]
 
 	// hashArray always has length 1
 	// 0: # or empty
@@ -62,45 +65,5 @@ function parseHash(hash: string) {
 		selectedSlideShowStore.set(selectedSlideShow)
 		selectedSlideIndexStore.set(0)
 		// window.location.hash = `#/${selectedChapter}/`
-	}
-
-	// if (hashArray.length >= 1) {
-	//   const requestedGroup = hashArray[1]
-	//   const availableGroups = Object.keys(slideData)
-	// 	if (groups.includes(hashArray[1] === 'project' && slideData[hashArray[2]]) {
-	// 		const index =
-	// 			hashArray[3] && +hashArray[3] <= slideData[hashArray[2]].length && +hashArray[3] > 0
-	// 				? +hashArray[3] - 1
-	// 				: 0
-	// 		slideShowId.set(hashArray[2])
-	// 		slideIndex.set(index)
-	// 	} else if (hashArray[1] === 'about') {
-	// 		slideShowId.set(undefined)
-	// 		slideIndex.set(0)
-	// 		// about = true
-	// 	} else {
-	// 		slideShowId.set(undefined)
-	// 		slideIndex.set(0)
-	// 		// about = false
-	// 		// window.location.hash = '#/'
-	// 	}
-	// }
-}
-
-// export function goNext() {
-// 	window.location.hash = `#/${$selectedChapterStore}/${$selectedSlideShowStore}/${
-// 		$selectedSlideIndexStore + 1
-// 	}`
-// }
-
-export function goHome() {
-	window.location.hash = '#/'
-}
-
-export function goAbout() {
-	if (about) {
-		window.location.hash = '#/'
-	} else {
-		window.location.hash = '#/about'
 	}
 }

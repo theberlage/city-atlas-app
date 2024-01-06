@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { menu } from '$lib/shared/stores/componentStates.js'
-	import { selectedChapter, black } from '$lib/shared/stores/selectedSlide.js'
+	import { black } from '$lib/shared/stores/selectedSlide.js'
 	import Page from '../../routes/+page.svelte'
 	import { bars, close } from '$lib/shared/svgs.js'
 	const toggleMenu = () => menu.toggle()

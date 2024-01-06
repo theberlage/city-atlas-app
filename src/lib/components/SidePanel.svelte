@@ -8,8 +8,6 @@
 	import { page } from '$app/stores'
 	import { fade } from 'svelte/transition'
 
-	let innerWidth: number
-	$: hidden = innerWidth > 600 ? false : true
 	let data: any
 	let path: string
 	let html: string
@@ -19,24 +17,25 @@
 	let allmapsViewer: string = 'https://viewer.allmaps.org/?url='
 
 	$: {
-		data = $slide.frontmatter
-		html = $slide.html
-		path = $slide.path
-		legend = data.legend && data.legend.length > 0 ? data.legend : undefined
-		annotations = data.allmaps && data.allmaps.length > 0 ? data.allmaps : undefined
-		xyz = data.xyz?.url ? data.xyz : undefined
+		if ($slide) {
+			data = $slide.frontmatter
+			html = $slide.html
+			path = $slide.path
+			legend = data.legend && data.legend.length > 0 ? data.legend : undefined
+			annotations = data.allmaps && data.allmaps.length > 0 ? data.allmaps : undefined
+			xyz = data.xyz?.url ? data.xyz : undefined
+		}
 	}
 </script>
 
-<svelte:window bind:innerWidth />
+<svelte:window />
 
 <div class="panel-grid-container" transition:fade>
 	<div class="description">
 		<p class="project">
 			{data.meta.heading}
-			<span class="float">{$index + 1}/{$count}</span>
 		</p>
-		<div class:hidden class="body">
+		<div class="body">
 			{@html html}
 			{#if legend}
 				<span class="sub-title">Legend</span>
@@ -128,7 +127,6 @@
 		overflow: auto;
 		z-index: 2;
 		line-height: 1.3;
-		margin: 1rem 0;
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -172,7 +170,7 @@
 			background-color: white;
 		}
 		.body {
-			padding-bottom: 4.2rem;
+			padding-bottom: 5.2rem;
 		}
 		.project {
 			font-size: 1rem;

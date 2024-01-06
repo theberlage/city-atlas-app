@@ -1,7 +1,7 @@
 import { readable, writable, derived, get } from 'svelte/store'
 
-function toggleBoolean() {
-	const { subscribe, update, set } = writable<boolean>(false)
+function toggleBoolean(initialValue: boolean) {
+	const { subscribe, update, set } = writable<boolean>(initialValue)
 	return {
 		subscribe,
 		set,
@@ -9,6 +9,6 @@ function toggleBoolean() {
 	}
 }
 
-export const menu = toggleBoolean()
+export const menu = toggleBoolean(false)
 
-export const panel = toggleBoolean()
+export const panel = toggleBoolean(false)

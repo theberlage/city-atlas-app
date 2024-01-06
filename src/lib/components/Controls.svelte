@@ -9,7 +9,7 @@
 	import { next, prev } from '$lib/shared/svgs.js'
 	import { fly, slide as slideTransition, fade } from 'svelte/transition'
 
-	$: overview = $count > 1 ? false : true
+	$: overview = $count && $count > 1 ? false : true
 
 	const togglePanel = () => panel.toggle()
 
