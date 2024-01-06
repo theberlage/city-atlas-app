@@ -8,21 +8,24 @@
 
 <div class="menu" transition:fade>
 	<div class="body">
-		<p class="project">Menu</p>
-		<div class="html">
-			<ul>
-				{#each [...$slideData.keys()] as chapter}
-					<li><a on:click={toggleMenu} href="#/{chapter}">{chapter}</a></li>
-					<ul>
-						{#each [...$slideData.get(chapter).keys()] as slideshow}
-							<li>
-								<a on:click={toggleMenu} href="#/{chapter}/{slideshow}/1">{slideshow}</a>
-							</li>
-						{/each}
-					</ul>
-				{/each}
-			</ul>
-		</div>
+		<ul>
+			{#each [...$slideData.keys()] as chapter}
+				<li>
+					<a on:click={toggleMenu} href="#/{chapter}"
+						>{chapter.charAt(0).toUpperCase() + chapter.slice(1)}</a
+					>
+				</li>
+				<ul>
+					{#each [...$slideData.get(chapter).keys()].slice(1) as slideshow}
+						<li>
+							<a on:click={toggleMenu} href="#/{chapter}/{slideshow}/1"
+								>{slideshow.charAt(0).toUpperCase() + slideshow.slice(1)}</a
+							>
+						</li>
+					{/each}
+				</ul>
+			{/each}
+		</ul>
 	</div>
 </div>
 
@@ -53,22 +56,14 @@
 		text-decoration: none;
 	}
 	.body {
+		font-size: 1.2rem;
 		max-width: 600px;
 		max-height: 100%;
-	}
-	.project {
-		font-size: 0.8rem;
-		margin-bottom: 0;
-	}
-	.html {
-		hyphens: auto;
-		text-align: justify;
-		text-justify: inter-word;
-		columns: 1;
 	}
 	ul {
 		margin-left: 0;
 		padding-left: 1em;
+		padding-bottom: 1em;
 		list-style-type: none;
 	}
 	@media all and (max-width: 800px) {
