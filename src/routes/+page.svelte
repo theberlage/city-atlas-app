@@ -41,7 +41,9 @@
 		<Menu />
 	{/if}
 	<Map />
-	<Controls />
+	{#if $data}
+		<Controls />
+	{/if}
 	{#if $data && $panel}
 		<SidePanel />
 	{/if}
