@@ -3,7 +3,7 @@ import { hexToRGBA } from './utils.js'
 
 export const defaultStyles = new Style({
 	stroke: new Stroke({
-		color: 'rgba(255, 255, 114)',
+		color: 'yellow',
 		width: 4
 	}),
 	fill: new Fill({
@@ -13,17 +13,17 @@ export const defaultStyles = new Style({
 
 export const selectedStyles = new Style({
 	stroke: new Stroke({
-		color: 'rgba(255, 255, 114)',
+		color: 'yellow',
 		width: 4
 	}),
 	fill: new Fill({
-		color: 'rgba(255, 255, 114)'
+		color: 'yellow'
 	}),
 	image: new Circle({
 		radius: 15,
-		fill: new Fill({ color: 'rgba(255, 255, 114)' }),
+		fill: new Fill({ color: 'yellow' }),
 		stroke: new Stroke({
-			color: 'rgba(255, 255, 114)',
+			color: 'yellow',
 			width: 4
 		})
 	}),
@@ -32,7 +32,7 @@ export const selectedStyles = new Style({
 
 export const selectableStyles = new Style({
 	stroke: new Stroke({
-		color: 'rgba(255, 255, 114)',
+		color: 'yellow',
 		width: 4
 	}),
 	fill: new Fill({
@@ -40,9 +40,9 @@ export const selectableStyles = new Style({
 	}),
 	image: new Circle({
 		radius: 15,
-		fill: new Fill({ color: 'rgba(255, 255, 114, 0)' }),
+		fill: new Fill({ color: 'rgba(255, 255, 255, 0)' }),
 		stroke: new Stroke({
-			color: 'rgba(255, 255, 114)',
+			color: 'yellow',
 			width: 4
 		})
 	}),

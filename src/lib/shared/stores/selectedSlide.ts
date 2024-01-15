@@ -35,6 +35,18 @@ export const textColor = derived(selectedChapter, ($selectedChapter) =>
 	$selectedChapter === 'argumentation' ? 'rgb(53, 110, 79)' : 'rgb(119, 63, 63)'
 )
 
+export const overview = derived(selectedSlideShow, ($selectedSlideShow) => {
+	if ($selectedSlideShow) {
+		if (
+			$selectedSlideShow === 'home' ||
+			$selectedSlideShow === 'overview' ||
+			$selectedSlideShow === 'slide'
+		) {
+			return true
+		} else return false
+	}
+})
+
 const selectedSlideShowData = derived(
 	[selectedChapterData, selectedSlideShow],
 	([$selectedChapterData, $selectedSlideShow]) => {
