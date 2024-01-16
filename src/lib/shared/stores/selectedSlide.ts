@@ -136,13 +136,14 @@ export const vectorLayers = derived(selectedSlideData, ($selectedSlideData, set)
 				const map = new Map()
 				for (const item of data) {
 					if (item.resp.type === 'Feature') {
-						item.resp.properties.collection = item.path
-						item.resp.properties.collectionLabel = item.label
+						const properties = item.resp.properties
+						properties.collection = item.path
+						properties.label = properties.label || item.label
 					} else {
 						for (const feature of item.resp.features) {
 							// Add geojson path to each feature to check for existing features
 							feature.properties.collection = item.path
-							feature.properties.collectionLabel = item.label
+							feature.properties.label = feature.properties.label || item.label
 						}
 					}
 					map.set(item.path, item.resp)

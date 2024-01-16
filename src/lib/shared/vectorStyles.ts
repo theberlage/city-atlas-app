@@ -20,7 +20,7 @@ export const selectedStyles = new Style({
 		color: 'yellow'
 	}),
 	image: new Circle({
-		radius: 15,
+		radius: 10,
 		fill: new Fill({ color: 'yellow' }),
 		stroke: new Stroke({
 			color: 'yellow',
@@ -39,7 +39,7 @@ export const selectableStyles = new Style({
 		color: 'rgba(0, 255, 255, 0)'
 	}),
 	image: new Circle({
-		radius: 15,
+		radius: 10,
 		fill: new Fill({ color: 'rgba(255, 255, 255, 0)' }),
 		stroke: new Stroke({
 			color: 'yellow',
