@@ -247,8 +247,7 @@
 			}
 			// Set properties
 			const properties = annotation.properties
-			// if ('opacity' in properties) {
-			if (properties.opacity) {
+			if (properties.opacity !== undefined) {
 				let opacity = properties.opacity / 100
 				warpedMapLayer.setMapOpacity(id, opacity)
 			}
@@ -262,8 +261,7 @@
 					: 0.7
 				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
 			}
-			// if ('saturation' in properties) {
-			if (properties.saturation) {
+      if (properties.saturation !== undefined) {
 				warpedMapLayer.setMapSaturation(id, properties.saturation / 100)
 			}
 			if (properties.colorize) {
@@ -319,7 +317,7 @@
 		let selectable = false
 		vectorSource.forEachFeature(function (feature) {
 			let properties = feature.getProperties()
-			if (properties.label && properties.href) {
+			if (properties.href || properties.label) {
 				selectable = true
 				feature.setStyle(selectableStyles)
 
@@ -341,9 +339,6 @@
 				// extraFeature.setStyle(berlageIcon)
 				// vectorSource.addFeature(extraFeature)
 			} else {
-				if (properties.label) {
-					selectable = true
-				}
 				const customStyle = parseCustomFeatureStyle(properties)
 				feature.setStyle(customStyle)
 			}
@@ -360,11 +355,11 @@
 				if (feature == undefined || !properties.label) {
 					vectorSource.forEachFeature(function (feature) {
 						let properties = feature.getProperties()
-						if (properties.href) {
+						if (properties.href || properties.label) {
 							feature.setStyle(selectableStyles)
-						} else if (properties.label) {
-							const customStyle = parseCustomFeatureStyle(properties)
-							feature.setStyle(customStyle)
+						// } else if (properties.label) {
+						// 	const customStyle = parseCustomFeatureStyle(properties)
+						// 	feature.setStyle(customStyle)
 						}
 					})
 					map.getTargetElement().style.cursor = ''
@@ -472,9 +467,9 @@
 				{#if overlayContents}
 					{#if overlayContents.href}
 						<p>{overlayContents.label}</p>
-						<p class="overlay-link">
-							<a on:click={closeOverlay} href={overlayContents.href}
-								><i>
+            <p>
+							<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}
+								>
 									{#if $overview}
 										Start slideshow
 									{:else}
@@ -485,7 +480,7 @@
 											Documentation
 										{/if}
 									{/if}
-								</i></a
+								</a
 							>
 						</p>
 					{:else}
@@ -512,19 +507,26 @@
 	#overlay {
 		position: absolute;
 		min-width: 200px;
-		max-width: 300px;
+    max-width: 600px;
+    /* width: auto; */
 	}
 
 	#overlay-contents {
 		background-color: rgba(255, 255, 0, 0.9);
 		color: black;
-		padding: 5px;
-		border-radius: 0.2rem;
+		padding: 0.6rem;
+    line-height: 1.6rem;
+		border-radius: 0.4rem;
 		z-index: 100;
 		& p {
 			margin: 0;
 		}
 	}
+
+  a.overlay-link {
+    border-bottom: 1px solid var(--text-color);
+		color: black;
+  }
 
 	#overlay-closer {
 		float: right;
@@ -539,8 +541,8 @@
 			margin: 0;
 			border-radius: 0.2rem;
 			& svg {
-				height: 1rem;
-				width: 1rem;
+				height: 0.8rem;
+				width: 0.8rem;
 			}
 			&:hover {
 				color: black;
