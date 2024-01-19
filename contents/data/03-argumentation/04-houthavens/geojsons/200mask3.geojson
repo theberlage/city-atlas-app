@@ -3,7 +3,7 @@
     "features": [
       {
         "type": "Feature",
-        "properties": { "label": "Scale 1:200", "href": "#/argumentation/uilenburg/8" },
+        "properties": { "label": "Scale 1:200", "href": "#/argumentation/houthavens/8" },
         "geometry": {
           "type": "Polygon",
           "coordinates": [
