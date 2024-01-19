@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Empty field preserved for the construction of the playground (1)", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "Empty field preserved for the construction of the playground", "href": "#/documentation/slotermeer/2" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The vegetation plan, proposed by Architectenbureau Berghoef & Klarenbeek, architects of the unit, in 1952 (2)", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "The vegetation plan, proposed by Architectenbureau Berghoef & Klarenbeek, architects of the unit, in 1952", "href": "#/documentation/slotermeer/2" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

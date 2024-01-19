@@ -1,0 +1,82 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Specific play equipment replaced the iconic sandpit  from Aldo van Eyck’s playgrounds", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831704,
+                    52.380504
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Fragmented layout subdividing the playground into smaller areas", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831651,
+                    52.380437
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Vegetation separating the playground and the housing block, decreased in 2017", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831585,
+                    52.380361
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Rubber-made soft paving installed in 2017 to provide safer play environment" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831724,
+                    52.380347
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Abstract metallic play objects, present in both versions", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831763,
+                    52.380399
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Concrete bench for increased enclosure installed in 2017" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831841,
+                    52.38037
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Trees planted in 2017, keeping similar gaps to the 1979 situation", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831852,
+                    52.380338
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Vegetation plan, proposed by Architectenbureau Berghoef & Klarenbeek, architects of the unit, in 1953", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831225,
+                    52.380588
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Boundaries intensification with low bushes and bike racks, installed in the 2000s", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831905,
+                    52.380578
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Densified vegetation in the 2000s, obstructing visibility between the housing units", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831201,
+                    52.380328
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Bushes removed and replaced by fences to privatize the communal garden", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831288,
+                    52.380083
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Concrete bench for increased enclosure installed in 2017", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831827,
+                    52.380327
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Trees replanted in 2017", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831821,
+                    52.380253
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Space used as parking since 1955", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831835,
+                    52.3802
+                ]
+            }
+        }
+    ]
+}
