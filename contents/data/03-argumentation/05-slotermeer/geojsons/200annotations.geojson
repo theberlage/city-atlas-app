@@ -1,0 +1,82 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831225,
+                    52.380588
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831905,
+                    52.380578
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831201,
+                    52.380328
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831288,
+                    52.380083
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831827,
+                    52.380327
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831821,
+                    52.380253
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "what", "href": "#/documentation/slotermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.831835,
+                    52.3802
+                ]
+            }
+        }
+    ]
+}
