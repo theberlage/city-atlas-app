@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Empty field preserved for the construction of the playground", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "Empty field preserved for the construction of the playground" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The vegetation plan, proposed by Architectenbureau Berghoef & Klarenbeek, architects of the unit, in 1952", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "The vegetation plan, proposed by Architectenbureau Berghoef & Klarenbeek, architects of the unit, in 1952", "href": "#/documentation/slotermeer/5" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The complete situation of trees in the communal garden (3)", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "The complete situation of trees in the communal garden " },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Densification of the vegetation, renovated in the 2000s (4)", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "Densification of the vegetation, renovated in the 2000s ", "href": "#/documentation/slotermeer/10" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Vegetation used as a buffer between housing and parking space, rearranged in 2017 (5)", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "Vegetation used as a buffer between housing and parking space, rearranged in 2017 ", "href": "#/documentation/slotermeer/11" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "De Vlugt cultural center, opened in 2011 in a renovated historical school building", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "De Vlugt cultural center, opened in 2011 in a renovated historical school building" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Entrance of a newly-built school, with replanted, less dense vegetation for safety concerns in the 2000s (6)", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "Entrance of a newly-built school, with replanted, less dense vegetation for safety concerns in the 2000s " },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -91,7 +91,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Gerbrandypark, constructed in 1957, with a paddling pool by Aldo van Eyck, partly renovated in the 2000s", "href": "#/documentation/slotermeer/2" },
+            "properties": { "label": "Gerbrandypark, constructed in 1957, with a paddling pool by Aldo van Eyck, partly renovated in the 2000s" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
