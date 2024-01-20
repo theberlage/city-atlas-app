@@ -1,0 +1,148 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.980796,
+                    52.319188
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.982599,
+                    52.317314
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.978876,
+                    52.319756
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.981448,
+                    52.317479
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.979616,
+                    52.316735
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.97696,
+                    52.318899
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.975802,
+                    52.319139
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977106,
+                    52.317088
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.976678,
+                    52.315852
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.976446,
+                    52.315276
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.974608,
+                    52.316736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.973392,
+                    52.317662
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "WHAT ", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.972951,
+                    52.316602
+                ]
+            }
+        }
+    ]
+}
