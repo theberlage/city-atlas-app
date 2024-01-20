@@ -1,0 +1,82 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Unloaded log stored for future processing, drying, and manufacturing", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.881965,
+                    52.392552
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Quay walls used as retaining walls during the construction and operation of the timber port", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.881972,
+                    52.392615
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Wooden pile foundation used as support for the warehouses", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.882031,
+                    52.392562
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Underground patios located in the building designed by Boparai Architects in 2020", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.87922,
+                    52.394399
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Sheet piles used as retaining walls during the construction of housing blocks", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879271,
+                    52.394412
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Underground parking garages in the building designed by Boparai Architects in 2020", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879297,
+                    52.394334
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Maximum level of water reached in November 2023, about -20 cm NAP", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.87935,
+                    52.39439
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Warehouses for wood drying, processing and storage, built between 1876 and the 1900s", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.882024,
+                    52.39252
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Logs floating on water, received from the piers", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.882339,
+                    52.392303
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Canals used for shipment and unloading of logs, 1876–1940s", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.882596,
+                    52.392331
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Warehouses demolished in the 1990s after the companies left the area", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879849,
+                    52.393684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Bontekoning & Aukes, private wood company occupying the warehouses in 1998", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.880399,
+                    52.393701
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Canals filled in the 1950s after the port fell into disuse", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.880527,
+                    52.393462
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Canals used for leisure and the docking of private and housing boats", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.878566,
+                    52.394619
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Canals excavated in the 2020s as part of the Houthavens Master Plan", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.878757,
+                    52.394702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Housing blocks’ semi-private terraces located in Wiborgeiland", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.878841,
+                    52.394172
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Filled areas used as construction site occasioned infiltration problems in underground levels", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879122,
+                    52.394144
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Housing blocks’ underground levels located in Wiborgeiland", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879368,
+                    52.394468
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Filled areas used as parking and circulation", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879567,
+                    52.394342
+                ]
+            }
+        }
+    ]
+}
