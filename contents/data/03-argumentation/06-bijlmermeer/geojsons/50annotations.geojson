@@ -1,0 +1,71 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Sunken-in collective space from Nassuth’s original proposal in 1966", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.978013,
+                    52.319882
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Bar and performance spaces in one of the collective spaces, based on archival sources from the mid 1970s", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977998,
+                    52.319823
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The original structure allows for the flexibility of the sunken-in collective space", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977958,
+                    52.319834
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Exterior plugged-in collective space, Nassuth 1966", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977842,
+                    52.319861
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "First-floor connection to the elevated internal street", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977913,
+                    52.319789
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Shaded exterior space, Nassuth 1966", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977783,
+                    52.319805
+                ]
+            }
+        }
+    ]
+}

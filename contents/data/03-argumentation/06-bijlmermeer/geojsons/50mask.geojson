@@ -3,7 +3,7 @@
     "features": [
       {
         "type": "Feature",
-        "properties": {},
+        "properties": { "label": "Scale 1:50 ", "href": "#/argumentation/bijlmermeer/13" },
         "geometry": {
           "type": "Polygon",
           "coordinates": [

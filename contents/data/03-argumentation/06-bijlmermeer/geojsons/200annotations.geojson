@@ -1,0 +1,104 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Elevated internal street connecting the circulation cores to the parking garages, Nassuth 1966", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.978385,
+                    52.320095
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Renewed vertical circulation core of Kleiburg building by NL Architects, done between 2012 to 2016", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.978092,
+                    52.319701
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Unrealized exterior collective space from the original proposal, 1966", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977854,
+                    52.319895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Elevated internal street in the original proposal, demolished in 2012", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.978019,
+                    52.319632
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Ground access corridors made wider and taller by NL Architects, 2012–2016", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977784,
+                    52.31967
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "A fragment depicting the spectatorship seating arena punctured into the building facade, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.978037,
+                    52.319349
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Sports facilities and art installations populating the maaiveld, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977685,
+                    52.319206
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The viaduct connecting Bijlmer to Amsterdam via metro, built in 1976", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977299,
+                    52.319376
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The forest strip proposal, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.977329,
+                    52.319239
+                ]
+            }
+        }
+    ]
+}
