@@ -1,0 +1,115 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Series of housing blocks located on Wiborgeiland", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.878155,
+                    52.394141
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Waterfront of timber port in 1876", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.87888,
+                    52.39527
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Canals excavated in the 2020s as part of the Houthavens Master Plan", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.879606,
+                    52.395263
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Piers used for temporary docking of private boats and leisure activities", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.880583,
+                    52.395527
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Canals filled in the 1950s after the port fell into disuse", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.880507,
+                    52.393481
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Warehouses of private wood companies built between 1876 and the 1900s", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.881171,
+                    52.393416
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Quays and canals used for shipment and unloading of logs, 1876–1940s", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.881935,
+                    52.392804
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Warehouses of private wood companies built between 1876 and the 1900s", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.882724,
+                    52.392245
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Area filled in the 2010s as part of the Houthavens Master Plan", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.881459,
+                    52.394895
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Waterfront of the Houthavens Master Plan", "href": "#/documentation/houthavens/2" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.882809,
+                    52.39461
+                ]
+            }
+        }
+    ]
+}
