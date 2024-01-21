@@ -1,0 +1,49 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Planned greenery after demolition in the twentieth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891649,
+                    52.363171
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik"},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891441,
+                    52.362798
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Courtyard space occupied by storage, present" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.892311,
+                    52.364505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Residential houses existing from the seventeenth to the nineteenth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.892584,
+                    52.364844
+                ]
+            }
+        } 
+    ]
+}

@@ -3,111 +3,122 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Planned greenery after demolition in the twentieth century" },
+            "properties": { "label": "Property line separation of private yards in 1892" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.906932,
-                    52.371487
+                    4.891956,
+                    52.362363
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik"},
+            "properties": { "label": "One of three basements constructed on site in the twenty-first century"},
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.906911,
-                    52.371547
+                    4.892052,
+                    52.362367
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Courtyard space occupied by storage, present" },
+            "properties": { "label": "Construction of roof terraces in 2004" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.906136,
-                    52.371312
+                    4.892029,
+                    52.362348
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Residential houses existing from the seventeenth to the nineteenth century" },
+            "properties": { "label": "Ornate corner facades with chimney, showcase window, and a corner entrance in the late nineteenth century" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.906144,
-                    52.371076
+                    4.892038,
+                    52.362418
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Courtyard created by splitting the warehouse structure during the renovation" },
+            "properties": { "label": "Growth of strorage units in the early twentieth century" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.906658,
-                    52.370932
+                    4.891686,
+                    52.362491
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Seventeenth-century warehouses, renovated in the 1980s" },
+            "properties": { "label": "The first extension on ground floor in 1899" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.90676,
-                    52.370778
+                    4.891636,
+                    52.362537
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Jewish businesses and market, existing from the seventeenth to the nineteenth century" },
+            "properties": { "label": "Standard residential housing constructed through private developers in the late nineteenth century" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.905908,
-                    52.370807
+                    4.891507,
+                    52.362626
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Demolition following Woningwet 1901 in the twentieth century" },
+            "properties": { "label": "xx" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.905746,
-                    52.371128
+                    4.891617,
+                    52.362615
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat, constructed in the 1920s" },
+            "properties": { "label": "mm" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.906844,
-                    52.371282
+                    4.891584,
+                    52.362662
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Boathouse, an alternative domestic space, 2000s" },
+            "properties": { "label": "uu" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.9067797,
-                    52.3717217
+                    4.891664,
+                    52.36259
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "ww" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891587,
+                    52.362671
                 ]
             }
         }

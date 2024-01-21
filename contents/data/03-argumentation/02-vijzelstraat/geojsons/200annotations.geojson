@@ -1,0 +1,93 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Property line separation of private yards in 1892" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.89204,
+                    52.36265
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "One of three basements constructed on site in the twenty-first century"},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.892109,
+                    52.362486
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Construction of roof terraces in 2004" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.89182,
+                    52.362672
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Ornate corner facades with chimney, showcase window, and a corner entrance in the late nineteenth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891533,
+                    52.362468
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Growth of strorage units in the early twentieth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891359,
+                    52.362614
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The first extension on ground floor in 1899" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891747,
+                    52.363039
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Standard residential housing constructed through private developers in the late nineteenth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891743,
+                    52.362155
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "xx" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891644,
+                    52.362021
+                ]
+            }
+        }
+    ]
+}
