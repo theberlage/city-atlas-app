@@ -1,0 +1,104 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906453,
+                    52.37139
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Carpet flooring, seen also in other modernist domestic spaces in Amsterdam around the same period"},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.90645,
+                    52.371339
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Residential houses existing from the seventeenth to the nineteenth century, interior constantly being modified" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.9065,
+                    52.3713
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Crude wooden floor tiles used in the canal houses" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906498,
+                    52.371276
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Mattresses on the floor for the whole family" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906495,
+                    52.371259
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Seventeenth-century warehouses, renovated in the 1980s" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906755,
+                    52.371111
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Polished wooden floor tiles" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906674,
+                    52.371094
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Courtyard gallery leading to apartments" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906783,
+                    52.371045
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Brick facade in Amsterdam school style popular among public projects in early twentieth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906374,
+                    52.371386
+                ]
+            }
+        }
+    ]
+}
