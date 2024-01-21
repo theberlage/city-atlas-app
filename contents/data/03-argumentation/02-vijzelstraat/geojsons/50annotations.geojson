@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Property line separation of private yards in 1892" },
+            "properties": { "label": "Original cobblestone road pavement, used in seventeenth century" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "One of three basements constructed on site in the twenty-first century"},
+            "properties": { "label": "Bakery in Vijzelstraat 137, built in the seventeenth century"},
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Construction of roof terraces in 2004" },
+            "properties": { "label": "Wooden window frames in seventeenth century building son VIjzelstraat, built in 1828" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Ornate corner facades with chimney, showcase window, and a corner entrance in the late nineteenth century" },
+            "properties": { "label": "Glass and aluminum window vitrine of a shop in a seventeenth century building, renovated in 2007" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Growth of strorage units in the early twentieth century" },
+            "properties": { "label": "Concrete pavement, constructed in 1928 as part of the Vijzelstraat widening works" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The first extension on ground floor in 1899" },
+            "properties": { "label": "Commercial banner in Amstelstein columns to get exposure to the street" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Standard residential housing constructed through private developers in the late nineteenth century" },
+            "properties": { "label": "Commercial space on Amstelstein's ground floor" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "xx" },
+            "properties": { "label": "Steel framed window vitrines of Amstelstein's commercial spaces" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -91,7 +91,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "mm" },
+            "properties": { "label": "Amstelstein apartment building designed by Jo van der Mey, built in 1928" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -102,7 +102,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "uu" },
+            "properties": { "label": "Commercial arcade of Amstelstein" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -113,7 +113,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "ww" },
+            "properties": { "label": "Brick facade in Amsterdam school style" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

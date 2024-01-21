@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Planned greenery after demolition in the twentieth century" },
+            "properties": { "label": "Amstelstein apartment building, designed by Jo van der Mey, built in 1928 and demolished in 1962" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik"},
+            "properties": { "label": "Algemene Bank Nederland, designed by Mariud Duintjer, built in 1964"},
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Courtyard space occupied by storage, present" },
+            "properties": { "label": "Nederlandsche Handel Maatschappij office building, design by K. de Bazel in 1926" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Residential houses existing from the seventeenth to the nineteenth century" },
+            "properties": { "label": "Canal house-like buildings, built in the seventeenth century and demolished in 1926" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

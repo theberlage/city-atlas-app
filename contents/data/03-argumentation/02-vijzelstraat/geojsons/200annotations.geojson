@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Property line separation of private yards in 1892" },
+            "properties": { "label": "Facades of the seventeenth century buildings on the east side of Vijzelstraat" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "One of three basements constructed on site in the twenty-first century"},
+            "properties": { "label": "Shops on the ground floor of the seventeenth century buildings"},
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Construction of roof terraces in 2004" },
+            "properties": { "label": "Commercial arcade in Amstelstein" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Ornate corner facades with chimney, showcase window, and a corner entrance in the late nineteenth century" },
+            "properties": { "label": "Commercial space on Amstelstein's ground floor" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Growth of strorage units in the early twentieth century" },
+            "properties": { "label": "3 bedroom apartments in Amstelstein" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The first extension on ground floor in 1899" },
+            "properties": { "label": "Amstelstein apartment building designed by Jo van der Mey, built in 1928" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Standard residential housing constructed through private developers in the late nineteenth century" },
+            "properties": { "label": "Electric tramway envisioned in K. de Bazel's plan" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "xx" },
+            "properties": { "label": "Vijzelstraat's widened street profile designed by K. de Bazel" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
