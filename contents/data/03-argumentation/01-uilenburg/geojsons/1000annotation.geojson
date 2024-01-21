@@ -1,0 +1,104 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Plan for the south expansion of Amsterdam by Jan Kalff in 1875" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906671,
+                    52.37125
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The Pesthuis, built in 1635 and demolished in 1937"},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.90688,
+                    52.371413
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Stads polder parcellation for agricultural, industrial, and recreational use, eighteenth century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.905972,
+                    52.370341
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Sitewide demolitions beginning in the 1890s" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.904484,
+                    52.37037
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Sofia Park, appeared in the nineteenth century and demolished in the 1920s" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.903445,
+                    52.369846
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Overtoomsevaart canal, filled between 1901 and 1902" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.902688,
+                    52.370335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Amsterdam fortification wall, demolished in 1874" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.907613,
+                    52.369833
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The new grid plan of Buurt XX (now Helmersbuurt)" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.907783,
+                    52.369449
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "The new grid plan of Buurt XX (now Helmersbuurt)" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.906849,
+                    52.368034
+                ]
+            }
+        }
+    ]
+}

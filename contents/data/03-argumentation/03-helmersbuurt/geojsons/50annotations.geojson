@@ -1,0 +1,93 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "label": "Derde Helmerstraat 32, designed by Leendert van der Tas in 1899" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876616,
+                    52.36518
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Basement construction (kelderbouw) for commercial storage built in the twentieth century"},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.87664,
+                    52.365191
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Structural party walls constructed with double brick (18 x 9 x 4.3cm) and lime mortar in 1899" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876509,
+                    52.365191
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Historically preserved brick facades from 1899 to present" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876468,
+                    52.365195
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Renovation for the subdivision of interior rooms (verkamering) in the twenty-first century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876577,
+                    52.365251
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Partial sublevel addition in the twenty-first century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876636,
+                    52.365248
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Traditional design features from 1899" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876436,
+                    52.365297
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Roof terrace extension in the twenty-first century" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.876338,
+                    52.365314
+                ]
+            }
+        }
+    ]
+}
