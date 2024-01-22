@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Plan for the south expansion of Amsterdam by Jan Kalff in 1875" },
+            "properties": { "label": "Plan for the south expansion of Amsterdam by Jan Kalff in 1875", "href": "#/documentation/helmersbuurt/2" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The Pesthuis, built in 1635 and demolished in 1937"},
+            "properties": { "label": "The Pesthuis, built in 1635 and demolished in 1937", "href": "#/documentation/helmersbuurt/1" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Stads polder parcellation for agricultural, industrial, and recreational use, eighteenth century" },
+            "properties": { "label": "Stads polder parcellation for agricultural, industrial, and recreational use, eighteenth century", "href": "#/documentation/helmersbuurt/1" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Sofia Park, appeared in the nineteenth century and demolished in the 1920s" },
+            "properties": { "label": "Sofia Park, appeared in the nineteenth century and demolished in the 1920s", "href": "#/documentation/helmersbuurt/4" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Amsterdam fortification wall, demolished in 1874" },
+            "properties": { "label": "Amsterdam fortification wall, demolished in 1874", "href": "#/documentation/helmersbuurt/1"  },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The new grid plan of Buurt XX (now Helmersbuurt)" },
+            "properties": { "label": "The new grid plan of Buurt XX (now Helmersbuurt)", "href": "#/documentation/helmersbuurt/5" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
