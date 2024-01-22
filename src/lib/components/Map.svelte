@@ -261,7 +261,7 @@
 					: 0.7
 				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
 			}
-      if (properties.saturation !== undefined) {
+			if (properties.saturation !== undefined) {
 				warpedMapLayer.setMapSaturation(id, properties.saturation / 100)
 			}
 			if (properties.colorize) {
@@ -284,16 +284,16 @@
 		let addedCount = 0
 		let existingCount = 0
 		vectorSource.forEachFeature((feature) => {
-			const path = feature.getProperties().collection
+			const id = feature.getProperties().collection
 			// Remove vectors from VectorSource that are not on the new slide
-			if (!newVectorSource.has(path)) {
+			if (!newVectorSource.has(id)) {
 				vectorSource.removeFeature(feature)
 				removedCount++
 			}
 		})
-		for (let [path, features] of newVectorSource) {
+		for (let [id, features] of newVectorSource) {
 			// Only add new features to VectorSource
-			if (!currentVectorSource.has(path)) {
+			if (!currentVectorSource.has(id)) {
 				let parsedFeatures = new GeoJSON().readFeatures(features, {
 					featureProjection: 'EPSG:3857'
 				})
@@ -357,9 +357,9 @@
 						let properties = feature.getProperties()
 						if (properties.href || properties.label) {
 							feature.setStyle(selectableStyles)
-						// } else if (properties.label) {
-						// 	const customStyle = parseCustomFeatureStyle(properties)
-						// 	feature.setStyle(customStyle)
+							// } else if (properties.label) {
+							// 	const customStyle = parseCustomFeatureStyle(properties)
+							// 	feature.setStyle(customStyle)
 						}
 					})
 					map.getTargetElement().style.cursor = ''
@@ -384,7 +384,7 @@
 						overlay.setPosition(coordinate)
 						overlayBoolean = true
 						console.log('Positioned overlay')
-					}
+					} else closeOverlay()
 				} else closeOverlay()
 			})
 		})
@@ -467,21 +467,19 @@
 				{#if overlayContents}
 					{#if overlayContents.href}
 						<p>{overlayContents.label}</p>
-            <p>
-							<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}
-								>
-									{#if $overview}
-										Start slideshow
-									{:else}
-										Open in
-										{#if overlayContents.href.includes('argumentation')}
-											Argumentation
-										{:else if overlayContents.href.includes('documentation')}
-											Documentation
-										{/if}
+						<p>
+							<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
+								{#if $overview}
+									Start slideshow
+								{:else}
+									Open in
+									{#if overlayContents.href.includes('argumentation')}
+										Argumentation
+									{:else if overlayContents.href.includes('documentation')}
+										Documentation
 									{/if}
-								</a
-							>
+								{/if}
+							</a>
 						</p>
 					{:else}
 						<p>{overlayContents.label}</p>
@@ -507,15 +505,15 @@
 	#overlay {
 		position: absolute;
 		min-width: 200px;
-    max-width: 600px;
-    /* width: auto; */
+		max-width: 600px;
+		/* width: auto; */
 	}
 
 	#overlay-contents {
 		background-color: rgba(255, 255, 0, 0.9);
 		color: black;
 		padding: 0.6rem;
-    line-height: 1.6rem;
+		line-height: 1.6rem;
 		border-radius: 0.4rem;
 		z-index: 100;
 		& p {
@@ -523,10 +521,10 @@
 		}
 	}
 
-  a.overlay-link {
-    border-bottom: 1px solid var(--text-color);
+	a.overlay-link {
+		border-bottom: 1px solid var(--text-color);
 		color: black;
-  }
+	}
 
 	#overlay-closer {
 		float: right;

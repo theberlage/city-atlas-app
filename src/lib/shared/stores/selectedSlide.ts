@@ -137,14 +137,25 @@ export const vectorLayers = derived(selectedSlideData, ($selectedSlideData, set)
 				for (const item of data) {
 					if (item.resp.type === 'Feature') {
 						const properties = item.resp.properties
-						properties.collection = item.path
-						properties.label = properties.label || item.label
+						// Delete id property in case of duplicate ids
+						delete item.resp.id
+						item.resp.properties = {
+							...properties,
+							label: properties?.label || item.label,
+							collection: item.path
+						}
 					} else {
 						for (const feature of item.resp.features) {
+							// Delete id property in case of duplicate ids
+							delete feature.id
 							// Add geojson path to each feature to check for existing features
-							feature.properties.collection = item.path
-              // Uncomment the line below to add labels from the frontmatter
-							// feature.properties.label = feature.properties.label || item.label
+							feature.properties = { ...feature.properties, collection: item.path }
+							// Replace for the lines below to add labels from the frontmatter
+							// feature.properties = {
+							// 	...feature.properties,
+							// 	collection: item.path,
+							// 	label: feature.properties?.label || item.label
+							// }
 						}
 					}
 					map.set(item.path, item.resp)
