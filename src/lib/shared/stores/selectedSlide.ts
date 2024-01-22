@@ -28,19 +28,19 @@ const selectedChapterData = derived(
 )
 
 export const black = derived(selectedChapter, ($selectedChapter) =>
-	$selectedChapter === 'argumentation' ? false : true
+	$selectedChapter === 'documentation' ? true : false
 )
 
 export const textColor = derived(selectedChapter, ($selectedChapter) =>
-	$selectedChapter === 'argumentation' ? 'rgb(53, 110, 79)' : 'rgb(119, 63, 63)'
+	$selectedChapter === 'documentation' ? 'rgb(119, 63, 63)' : 'rgb(53, 110, 79)'
 )
 
 export const overview = derived(selectedSlideShow, ($selectedSlideShow) => {
 	if ($selectedSlideShow) {
 		if (
 			$selectedSlideShow === 'home' ||
-			$selectedSlideShow === 'overview' ||
-			$selectedSlideShow === 'slide'
+			$selectedSlideShow === 'overview'
+			// $selectedSlideShow === 'slide'
 		) {
 			return true
 		} else return false
