@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Property line separation of private yards in 1892" },
+            "properties": { "label": "Property line separation of private yards in 1892", "href": "#/documentation/helmersbuurt/8" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "One of three basements constructed on site in the twenty-first century"},
+            "properties": { "label": "One of three basements constructed on site in the twenty-first century", "href": "#/documentation/helmersbuurt/10" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Construction of roof terraces in 2004" },
+            "properties": { "label": "Construction of roof terraces in 2004", "href": "#/documentation/helmersbuurt/13" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The first extension on ground floor in 1899" },
+            "properties": { "label": "The first extension on ground floor in 1899", "href": "#/documentation/helmersbuurt/8" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Standard residential housing constructed through private developers in the late nineteenth century" },
+            "properties": { "label": "Standard residential housing constructed through private developers in the late nineteenth century", "href": "#/documentation/helmersbuurt/8" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

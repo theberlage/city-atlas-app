@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Derde Helmerstraat 32, designed by Leendert van der Tas in 1899" },
+            "properties": { "label": "Derde Helmerstraat 32, designed by Leendert van der Tas in 1899", "href": "#/documentation/helmersbuurt/12" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
