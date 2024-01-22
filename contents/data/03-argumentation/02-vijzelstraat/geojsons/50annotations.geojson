@@ -51,8 +51,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.891686,
-                    52.362491
+                    4.891792,
+                    52.362433
                 ]
             }
         },
@@ -62,19 +62,19 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.891636,
-                    52.362537
+                    4.891739,
+                    52.36248
                 ]
             }
         },
         {
             "type": "Feature",
-            "properties": { "label": "Commercial space on Amstelstein's ground floor" },
+            "properties": { "label": "Commercial arcade of Amstelstein " },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.891507,
-                    52.362626
+                    4.891767,
+                    52.362537
                 ]
             }
         },
@@ -84,30 +84,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.891617,
-                    52.362615
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Amstelstein apartment building designed by Jo van der Mey, built in 1928" },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    4.891584,
-                    52.362662
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Commercial arcade of Amstelstein" },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    4.891664,
-                    52.36259
+                    4.891718,
+                    52.362563
                 ]
             }
         },
@@ -117,8 +95,30 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    4.891587,
-                    52.362671
+                    4.891685,
+                    52.36262
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Amstelstein apartment building designed by Jo van der Mey, built in 1928 " },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891682,
+                    52.362611
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "label": "Commercial space on Amstelstein's ground floor" },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.891602,
+                    52.362573
                 ]
             }
         }
