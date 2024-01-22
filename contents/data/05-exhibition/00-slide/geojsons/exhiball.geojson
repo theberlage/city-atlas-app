@@ -236,7 +236,7 @@
                     ]
                 ]
             },
-            "properties": { "label": "Play me", "href": "#/argumentation/uilenburg" }
+            "properties": { "label": "Play me", "href": "https://arcade.allmaps.org" }
         }
     ]
 }
