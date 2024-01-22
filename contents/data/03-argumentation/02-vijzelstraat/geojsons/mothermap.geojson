@@ -121,7 +121,7 @@
 					]
 				]
 			},
-			"properties": { "label": "Vijzelstraat", "href": "#/argumentation/vijzelstraat" }
+			"properties": { "label": "Vijzelstraat" }
 		},
 		{
 			"type": "Feature",
