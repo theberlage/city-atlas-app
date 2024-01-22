@@ -97,7 +97,7 @@
 					]
 				]
 			},
-			"properties": { "label": "Houthavens", "href": "#/argumentation/houthavens" }
+			"properties": { "label": "Houthavens" }
 		},
 		{
 			"type": "Feature",
