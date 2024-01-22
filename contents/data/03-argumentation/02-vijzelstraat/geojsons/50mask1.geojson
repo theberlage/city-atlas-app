@@ -3,7 +3,7 @@
     "features": [
       {
         "type": "Feature",
-        "properties": { "label": "Scale 1:50", "href": "#/argumentation/vijzelstraat/11" },
+        "properties": { "label": "Scale 1:50", "href": "#/argumentation/vijzelstraat/12" },
         "geometry": {
           "type": "Polygon",
           "coordinates": [
