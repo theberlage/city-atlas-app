@@ -5,7 +5,7 @@
     ],
     "items": [
       {
-        "id": "a49f99a0a5571a35",
+        "id": "d00ec6aeda36adf2",
         "type": "Annotation",
         "@context": [
           "http://www.w3.org/ns/anno.jsonld",
@@ -24,7 +24,7 @@
           ],
           "selector": {
             "type": "SvgSelector",
-            "value": "<svg width=\"13523\" height=\"14998\"><polygon points=\"1850,11970 1852,12969 2316,13418 5964,9770 5905,9718 5906,9690 5517,9304 5517,8305 5488,8283 1826,11945\" /></svg>"
+            "value": "<svg width=\"13523\" height=\"14998\"><polygon points=\"52,44 13605,-75 13617,15112 -168,15123\" /></svg>"
           }
         },
         "body": {
