@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Amstelstein apartment building, designed by Jo van der Mey, built in 1928 and demolished in 1962" },
+            "properties": { "label": "Amstelstein apartment building, designed by Jo van der Mey, built in 1928 and demolished in 1962", "href": "#/documentation/vijzelstraat/10" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Algemene Bank Nederland, designed by Mariud Duintjer, built in 1964"},
+            "properties": { "label": "Algemene Bank Nederland, designed by Mariud Duintjer, built in 1964", "href": "#/documentation/vijzelstraat/11" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Nederlandsche Handel Maatschappij office building, design by K. de Bazel in 1926" },
+            "properties": { "label": "Nederlandsche Handel Maatschappij office building, design by K. de Bazel in 1926", "href": "#/documentation/vijzelstraat/10" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Canal house-like buildings, built in the seventeenth century and demolished in 1926" },
+            "properties": { "label": "Canal house-like buildings, built in the seventeenth century and demolished in 1926", "href": "#/documentation/vijzelstraat/8" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
