@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik"},
+            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik", "href": "#/documentation/uilenburg/5" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Courtyard created by splitting the warehouse structure during the renovation" },
+            "properties": { "label": "Courtyard created by splitting the warehouse structure during the renovation", "href": "#/documentation/uilenburg/14" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Jewish businesses and market, existing from the seventeenth to the nineteenth century" },
+            "properties": { "label": "Jewish businesses and market, existing from the seventeenth to the nineteenth century", "href": "#/documentation/uilenburg/5" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Demolition following Woningwet 1901 in the twentieth century" },
+            "properties": { "label": "Demolition following Woningwet 1901 in the twentieth century", "href": "#/documentation/uilenburg/8" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -91,7 +91,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat, constructed in the 1920s" },
+            "properties": { "label": "Nieuwe Uilenburgerstraat, constructed in the 1920s", "href": "#/documentation/uilenburg/9" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

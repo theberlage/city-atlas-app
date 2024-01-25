@@ -58,7 +58,7 @@
 					]
 				]
 			},
-			"properties": { "label": "Uilenburg & Marken" }
+			"properties": { "label": "Uilenburg & Marken", "href": "#/argumentation/uilenburg/2" }
 		},
 		{
 			"type": "Feature",
