@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik" },
+            "properties": { "label": "Nieuwe Uilenburgerstraat 2-68, social housing block by Johannes Hendrik", "href": "#/documentation/uilenburg/11" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Residential houses existing from the seventeenth to the nineteenth century, interior constantly being modified" },
+            "properties": { "label": "Residential houses existing from the seventeenth to the nineteenth century, interior constantly being modified", "href": "#/documentation/uilenburg/7" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
