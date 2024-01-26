@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Elevated internal street connecting the circulation cores to the parking garages, Nassuth 1966", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Elevated internal street connecting the circulation cores to the parking garages, Nassuth 1966" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Renewed vertical circulation core of Kleiburg building by NL Architects, done between 2012 to 2016", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Renewed vertical circulation core of Kleiburg building by NL Architects, done between 2012 to 2016" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Unrealized exterior collective space from the original proposal, 1966", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Unrealized exterior collective space from the original proposal, 1966", "href": "#/documentation/bijlmermeer/7" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Elevated internal street in the original proposal, demolished in 2012", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Elevated internal street in the original proposal, demolished in 2012" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Ground access corridors made wider and taller by NL Architects, 2012–2016", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Ground access corridors made wider and taller by NL Architects, 2012–2016", "href": "#/documentation/bijlmermeer/14" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "A fragment depicting the spectatorship seating arena punctured into the building facade, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "A fragment depicting the spectatorship seating arena punctured into the building facade, OMA 1986", "href": "#/documentation/bijlmermeer/11" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Sports facilities and art installations populating the maaiveld, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Sports facilities and art installations populating the maaiveld, OMA 1986", "href": "#/documentation/bijlmermeer/10" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The viaduct connecting Bijlmer to Amsterdam via metro, built in 1976", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The viaduct connecting Bijlmer to Amsterdam via metro, built in 1976" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -91,7 +91,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The forest strip proposal, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The forest strip proposal, OMA 1986", "href": "#/documentation/bijlmermeer/11" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
