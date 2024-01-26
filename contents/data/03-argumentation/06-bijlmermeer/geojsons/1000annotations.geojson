@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Demolition of approximately half of the original built-fabric between 1992 and 2012", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Demolition of approximately half of the original built-fabric between 1992 and 2012", "href": "#/documentation/bijlmermeer/15" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Elevated roads brought to the ground, 1992–2012", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Elevated roads brought to the ground, 1992–2012" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Parking zones shifted to the maaiveld, 1992–2012", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Parking zones shifted to the maaiveld, 1992–2012", "href": "#/documentation/bijlmermeer/14" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Demolition of the parking units from 1992 to 2012", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Demolition of the parking units from 1992 to 2012", "href": "#/documentation/bijlmermeer/12" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Kraaiennest metro station which connects to Amsterdam centrum, constructed in 1976", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Kraaiennest metro station which connects to Amsterdam centrum, constructed in 1976" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The linear park, OMA 1986", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The linear park, OMA 1986", "href": "#/documentation/bijlmermeer/11" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The Bijlmerramp in 1992", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The Bijlmerramp in 1992" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Football field with a punctured facade, proposed by OMA in 1986", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Football field with a punctured facade, proposed by OMA in 1986", "href": "#/documentation/bijlmermeer/10" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -91,7 +91,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The elevated parking unit from 1975 to 1992", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The elevated parking unit from 1975 to 1992", "href": "#/documentation/bijlmermeer/7" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -102,7 +102,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Karspeldreef, an elevated driveway serving as one of the main access arteries", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Karspeldreef, an elevated driveway serving as one of the main access arteries" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -113,7 +113,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The unrealized plugged-in collective spaces from Nassuth’s original proposal", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The unrealized plugged-in collective spaces from Nassuth’s original proposal", "href": "#/documentation/bijlmermeer/7" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -124,7 +124,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Construction of the blocks from 1966 to 1975", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Construction of the blocks from 1966 to 1975" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -135,7 +135,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The lake and polders of Bijlmermeer until the 1963 reclamation", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The lake and polders of Bijlmermeer until the 1963 reclamation", "href": "#/documentation/bijlmermeer/1" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Sunken-in collective space from Nassuth’s original proposal in 1966", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Sunken-in collective space from Nassuth’s original proposal in 1966" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Bar and performance spaces in one of the collective spaces, based on archival sources from the mid 1970s", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Bar and performance spaces in one of the collective spaces, based on archival sources from the mid 1970s" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -25,7 +25,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "The original structure allows for the flexibility of the sunken-in collective space", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "The original structure allows for the flexibility of the sunken-in collective space" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Exterior plugged-in collective space, Nassuth 1966", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Exterior plugged-in collective space, Nassuth 1966", "href": "#/documentation/bijlmermeer/7" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "First-floor connection to the elevated internal street", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "First-floor connection to the elevated internal street" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -58,7 +58,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Shaded exterior space, Nassuth 1966", "href": "#/documentation/bijlmermeer/2" },
+            "properties": { "label": "Shaded exterior space, Nassuth 1966", "href": "#/documentation/bijlmermeer/7" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
