@@ -14,17 +14,17 @@
         ],
         "motivation": "georeferencing",
         "target": {
-            "type": "Image",
-            "source": "https://dlc.services/iiif-img/7/34/262ba87c9220f9570405692cbe30848d/full/full/0/default.jpg",
-            "service": [
-              {
-                "@id": "https://dlc.services/iiif-img/7/34/262ba87c9220f9570405692cbe30848d",
-                "type": "ImageService2"
-              }
-            ],
+          "type": "Image",
+          "source": "https://dlc.services/iiif-img/7/34/b3dcf60a27b75a4c6236784f4bcf9a26/full/full/0/default.jpg",
+          "service": [
+            {
+              "@id": "https://dlc.services/iiif-img/7/34/b3dcf60a27b75a4c6236784f4bcf9a26",
+              "type": "ImageService2"
+            }
+          ],
           "selector": {
             "type": "SvgSelector",
-            "value": "<svg width=\"13523\" height=\"14998\"><polygon points=\"1825,11946 1850,11971 1851,12972 2316,13420 5963,9772 5906,9716 5906,9689 5517,9308 5516,8308 5490,8282\" /></svg>"
+            "value": "<svg width=\"13523\" height=\"14998\"><polygon points=\"1850,11970 1852,12969 2316,13418 5964,9770 5905,9718 5906,9690 5517,9304 5517,8305 5488,8283 1826,11945\" /></svg>"
           }
         },
         "body": {

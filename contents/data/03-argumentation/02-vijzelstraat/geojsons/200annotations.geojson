@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Shops on the ground floor of the seventeenth century buildings"},
+            "properties": { "label": "Shops on the ground floor of the seventeenth century buildings", "href": "#/documentation/vijzelstraat/5" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -69,7 +69,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Electric tramway envisioned in K. de Bazel's plan" },
+            "properties": { "label": "Electric tramway envisioned in K. de Bazel's plan", "href": "#/documentation/vijzelstraat/9" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Vijzelstraat's widened street profile designed by K. de Bazel" },
+            "properties": { "label": "Vijzelstraat's widened street profile designed by K. de Bazel", "href": "#/documentation/vijzelstraat/9" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

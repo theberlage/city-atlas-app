@@ -14,7 +14,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Bakery in Vijzelstraat 137, built in the seventeenth century"},
+            "properties": { "label": "Bakery in Vijzelstraat 137, built in the seventeenth century", "href": "#/documentation/vijzelstraat/13" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

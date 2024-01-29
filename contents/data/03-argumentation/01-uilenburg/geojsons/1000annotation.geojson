@@ -3,7 +3,7 @@
     "features": [
         {
             "type": "Feature",
-            "properties": { "label": "Nieuwe Uilenburgerstraat constructed in the 1920s" },
+            "properties": { "label": "Nieuwe Uilenburgerstraat constructed in the 1920s", "href": "#/documentation/uilenburg/9" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -36,7 +36,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Residential houses exsiting from the seventeenth to the nineteenth century" },
+            "properties": { "label": "Residential houses exsiting from the seventeenth to the nineteenth century", "href": "#/documentation/uilenburg/3" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -47,7 +47,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Shipyard worker's houses, constructed in the 1590s" },
+            "properties": { "label": "Shipyard worker's houses, constructed in the 1590s", "href": "#/documentation/uilenburg/2" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
@@ -91,7 +91,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Fortification wall of the First Extension, constructed in 1585" },
+            "properties": { "label": "Fortification wall of the First Extension, constructed in 1585", "href": "#/documentation/uilenburg/2" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
