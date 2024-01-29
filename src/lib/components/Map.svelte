@@ -496,7 +496,9 @@
 								</p>
 							{:else}
 								<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
-									{#if $overview}
+									{#if overlayContents['link-title']}
+										{overlayContents['link-title']}
+									{:else if $overview}
 										Start slideshow
 									{:else if overlayContents.href.includes('argumentation')}
 										Go to slide

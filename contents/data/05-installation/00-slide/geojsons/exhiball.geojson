@@ -1,89 +1,150 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "properties": { "label": "Uilenburg Argumentation Drawings", "href": "#/argumentation/uilenburg" },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.3706721,52.0061731],[4.3706935,52.0061888],[4.3706955,52.006176],[4.3706741,52.00616],[4.3706721,52.0061731]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Vijzelstraat Argumentation Drawings", "href": "#/argumentation/vijzelstraat" },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.3706935,52.0061888],[4.3707158,52.0062053],[4.3707177,52.0061925],[4.3706954,52.006176],[4.3706935,52.0061888]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Helmersbuurt Argumentation Drawings", "href": "#/argumentation/helmersbuurt" },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.3707804,52.0062537],[4.370802,52.0062694],[4.3708038,52.0062569],[4.3707825,52.0062404],[4.3707804,52.0062537]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Houthavens Argumentation Drawings", "href": "#/argumentation/houthavens" },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.3708021,52.0062695],[4.3708244,52.006286],[4.3708263,52.006273],[4.3708038,52.0062569],[4.3708021,52.0062695]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Slotermeer Argumentation Drawings", "href": "#/argumentation/slotermeer" },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.3708855,52.0063316],[4.370907,52.0063473],[4.3709088,52.0063346],[4.3708877,52.0063186],[4.3708855,52.0063316]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "label": "Bijlmermeer Argumentation Drawings", "href": "#/argumentation/bijlmermeer" },
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.370907,52.0063473],[4.3709293,52.0063639],[4.3709311,52.0063513],[4.3709088,52.0063347],[4.370907,52.0063473]
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [4.3709383,52.0063284],[4.370941,52.0063303],[4.3709403,52.0063314],[4.37094,52.0063322],[4.3709455,52.0063364],[4.3709499,52.0063342],[4.370952,52.0063206],[4.3709462,52.0063165],[4.3709395,52.0063201],[4.3709383,52.0063284]
-                    ]
-                ]
-            },
-            "properties": { "label": "Play me", "href": "https://arcade.allmaps.org" }
-        }
-    ]
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"label": "Uilenburg Argumentation Drawings",
+				"href": "#/argumentation/uilenburg",
+				"link-title": "Go to slideshow"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.3706721, 52.0061731],
+						[4.3706935, 52.0061888],
+						[4.3706955, 52.006176],
+						[4.3706741, 52.00616],
+						[4.3706721, 52.0061731]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"label": "Vijzelstraat Argumentation Drawings",
+				"href": "#/argumentation/vijzelstraat",
+				"link-title": "Go to slideshow"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.3706935, 52.0061888],
+						[4.3707158, 52.0062053],
+						[4.3707177, 52.0061925],
+						[4.3706954, 52.006176],
+						[4.3706935, 52.0061888]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"label": "Helmersbuurt Argumentation Drawings",
+				"href": "#/argumentation/helmersbuurt",
+				"link-title": "Go to slideshow"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.3707804, 52.0062537],
+						[4.370802, 52.0062694],
+						[4.3708038, 52.0062569],
+						[4.3707825, 52.0062404],
+						[4.3707804, 52.0062537]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"label": "Houthavens Argumentation Drawings",
+				"href": "#/argumentation/houthavens",
+				"link-title": "Go to slideshow"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.3708021, 52.0062695],
+						[4.3708244, 52.006286],
+						[4.3708263, 52.006273],
+						[4.3708038, 52.0062569],
+						[4.3708021, 52.0062695]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"label": "Slotermeer Argumentation Drawings",
+				"href": "#/argumentation/slotermeer",
+				"link-title": "Go to slideshow"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.3708855, 52.0063316],
+						[4.370907, 52.0063473],
+						[4.3709088, 52.0063346],
+						[4.3708877, 52.0063186],
+						[4.3708855, 52.0063316]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"label": "Bijlmermeer Argumentation Drawings",
+				"href": "#/argumentation/bijlmermeer",
+				"link-title": "Go to slideshow"
+			},
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.370907, 52.0063473],
+						[4.3709293, 52.0063639],
+						[4.3709311, 52.0063513],
+						[4.3709088, 52.0063347],
+						[4.370907, 52.0063473]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[4.3709383, 52.0063284],
+						[4.370941, 52.0063303],
+						[4.3709403, 52.0063314],
+						[4.37094, 52.0063322],
+						[4.3709455, 52.0063364],
+						[4.3709499, 52.0063342],
+						[4.370952, 52.0063206],
+						[4.3709462, 52.0063165],
+						[4.3709395, 52.0063201],
+						[4.3709383, 52.0063284]
+					]
+				]
+			},
+			"properties": {
+				"label": "Allmaps Arcade",
+				"href": "https://arcade.allmaps.org",
+				"link-title": "Play me"
+			}
+		}
+	]
 }
