@@ -18,11 +18,11 @@
 	let innerHeight: number
 	let innerWidth: number
 
-	$: if (innerWidth > 700) {
-		panel.set(true)
-	} else {
-		panel.set(false)
-	}
+	// $: if (innerWidth > 700) {
+	// 	panel.set(true)
+	// } else {
+	// 	panel.set(false)
+	// }
 
 	onMount(async () => {
 		hash.set(location.hash)
@@ -44,9 +44,7 @@
 	{#if $data}
 		<Controls />
 	{/if}
-	{#if $data && $panel}
-		<SidePanel />
-	{/if}
+	<SidePanel />
 </div>
 
 <style>

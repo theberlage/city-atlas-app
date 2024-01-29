@@ -35,18 +35,6 @@ export const textColor = derived(selectedChapter, ($selectedChapter) =>
 	$selectedChapter === 'documentation' ? 'rgb(119, 63, 63)' : 'rgb(53, 110, 79)'
 )
 
-export const overview = derived(selectedSlideShow, ($selectedSlideShow) => {
-	if ($selectedSlideShow) {
-		if (
-			$selectedSlideShow === 'home' ||
-			$selectedSlideShow === 'overview'
-			// $selectedSlideShow === 'slide'
-		) {
-			return true
-		} else return false
-	}
-})
-
 const selectedSlideShowData = derived(
 	[selectedChapterData, selectedSlideShow],
 	([$selectedChapterData, $selectedSlideShow]) => {
@@ -58,6 +46,17 @@ const selectedSlideShowData = derived(
 
 export const selectedSlideShowCount = derived(selectedSlideShowData, ($selectedSlideShowData) => {
 	if ($selectedSlideShowData) return $selectedSlideShowData.length
+})
+
+export const overview = derived(selectedSlideShowCount, ($selectedSlideShowCount) => {
+	if ($selectedSlideShowCount && $selectedSlideShowCount === 1) {
+		// if (
+		// $selectedSlideShow === 'home' ||
+		// $selectedSlideShow === 'overview' ||
+		// $selectedSlideShow === 'slide'
+		// )
+		return true
+	} else return false
 })
 
 // Data for the current slide
