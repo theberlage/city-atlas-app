@@ -33,3 +33,9 @@ export const minus = `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hi
 export const arrowUp = `<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
 </svg>`
+
+export const gcpMarker = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle class="circle" cx="50%" cy="50%" r="90" fill="none" stroke="#000" stroke-dasharray="15.707963267948966 47.12388980384689" stroke-dashoffset="15.707963267948966" stroke-width="20"/>
+<circle class="circle" cx="50%" cy="50%" r="70" fill="none" stroke="#000" stroke-dasharray="12.217304763960307 36.65191429188092" stroke-dashoffset="-12.217304763960307" stroke-width="20"/>
+<circle class="circle" cx="50%" cy="50%" r="50" fill="none" stroke="#000" stroke-dasharray="8.726646259971648 26.179938779914945" stroke-dashoffset="8.726646259971648" stroke-width="20"/>
+</svg>`

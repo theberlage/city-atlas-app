@@ -10,7 +10,8 @@
 		vectorLayers as newVectorSource,
 		black,
 		textColor,
-		overview
+		overview,
+		selectedChapter as chapter
 	} from '$lib/shared/stores/selectedSlide.js'
 	import { panel } from '$lib/shared/stores/componentStates.js'
 	import { close } from '$lib/shared/svgs.js'
@@ -85,6 +86,8 @@
 	let overlayElement: HTMLElement
 	let overlayContents: any
 
+	$: about = $chapter === 'about' ? true : false
+
 	const addControls = () => {
 		const collection = new Collection()
 		const zoomIn = new Zoom({
@@ -107,6 +110,14 @@
 		// overlay.setPosition(undefined)
 	}
 
+	// $: {
+	// 	if (view) {
+	// 		map.on('moveend', () => {
+	// 			console.log(view.getZoom(), toLonLat(view.getCenter()))
+	// 		})
+	// 	}
+	// }
+
 	// Add Mapbox background layer
 	$: {
 		if (map && $mapboxSettings) {
@@ -125,7 +136,7 @@
 	$: {
 		// Todo: use view.fit(extent, {padding, duration})
 		// https://openlayers.org/en/latest/apidoc/module-ol_View-View.html#fit
-		if (view && innerWidth > 600) {
+		if (view && innerWidth > 700) {
 			view.padding = $panel ? [0, 400, 0, 0] : [0, 0, 0, 0]
 		} else if (view) {
 			view.padding = [0, 0, 0, 0]
@@ -468,18 +479,34 @@
 					{#if overlayContents.href}
 						<p>{overlayContents.label}</p>
 						<p>
-							<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
-								{#if $overview}
-									Start slideshow
-								{:else}
-									Open in
-									{#if overlayContents.href.includes('argumentation')}
-										Argumentation
+							{#if about}
+								<p>
+									<a
+										class="overlay-link"
+										on:click={closeOverlay}
+										href={overlayContents.href.replace('argumentation', 'documentation')}
+									>
+										Open in Documentation
+									</a>
+								</p>
+								<p>
+									<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
+										Open in Argumentation
+									</a>
+								</p>
+							{:else}
+								<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
+									{#if overlayContents['link-title']}
+										{overlayContents['link-title']}
+									{:else if $overview}
+										Start slideshow
+									{:else if overlayContents.href.includes('argumentation')}
+										Go to slide
 									{:else if overlayContents.href.includes('documentation')}
-										Documentation
+										Open in Documentation
 									{/if}
-								{/if}
-							</a>
+								</a>
+							{/if}
 						</p>
 					{:else}
 						<p>{overlayContents.label}</p>
@@ -522,8 +549,11 @@
 	}
 
 	a.overlay-link {
-		border-bottom: 1px solid var(--text-color);
+		border-bottom: 1px solid black;
 		color: black;
+		&:hover {
+			border-bottom: none;
+		}
 	}
 
 	#overlay-closer {
@@ -533,20 +563,21 @@
 			display: block;
 			border: none;
 			color: black;
-			width: 1rem;
-			height: 1rem;
 			padding: 0;
 			margin: 0;
+			height: 1rem;
+			width: 1rem;
 			border-radius: 0.2rem;
+			line-height: 0.4rem;
 			& svg {
 				height: 0.8rem;
 				width: 0.8rem;
 			}
 			&:hover {
-				color: black;
+				background: rgba(0, 0, 0, 0.2);
 			}
 			&:active {
-				color: black;
+				background: rgba(0, 0, 0, 0.2);
 			}
 		}
 	}

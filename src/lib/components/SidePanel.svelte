@@ -3,11 +3,14 @@
 		selectedSlideData as slide,
 		selectedSlideShowCount as count,
 		selectedSlideIndex as index,
+		selectedChapter as chapter,
 		textColor
 	} from '$lib/shared/stores/selectedSlide.js'
+	import { panel } from '$lib/shared/stores/componentStates.js'
 	import { hexToRGBA } from '$lib/shared/utils.js'
 	import { page } from '$app/stores'
-	import { fade } from 'svelte/transition'
+	import { fly } from 'svelte/transition'
+	import { gcpMarker } from '$lib/shared/svgs.js'
 
 	let data: any
 	let path: string
@@ -16,6 +19,18 @@
 	let legend: any
 	let xyz: any
 	let allmapsViewer: string = 'https://viewer.allmaps.org/?url='
+	let innerWidth: number
+	let innerHeight: number
+	$: flyX = innerWidth < 700 ? 0 : 400
+	$: flyY = innerWidth < 700 ? innerHeight : 0
+
+	$: if (innerWidth > 700) {
+		panel.set(true)
+	} else {
+		panel.set(false)
+	}
+
+	const togglePanel = () => panel.toggle()
 
 	$: {
 		if ($slide) {
@@ -29,76 +44,146 @@
 	}
 </script>
 
-<svelte:window />
+<svelte:window bind:innerWidth bind:innerHeight />
 
-<div class="panel-grid-container" style="--text-color: {$textColor}" transition:fade>
-	<div class="content">
-		<div class="body">
-			<p class="heading">
-				{data.meta.heading}
-			</p>
-			{@html html}
-			{#if legend}
-				<span class="sub-title">Legend</span>
-				<dl class="legend">
-					{#each legend as item}
-						<dt>
-							<div
-								class="legend-item"
-								style="background: {item.fill && item['fill-opacity']
-									? hexToRGBA(item.fill, item['fill-opacity'])
-									: item.fill
-									? item.fill
-									: 'none'}; border-color: {item.stroke && item['stroke-opacity']
-									? hexToRGBA(item.stroke, item['stroke-opacity'])
-									: item.stroke
-									? item.stroke
-									: item.fill}"
-							/>
-						</dt>
-						<dd>{item.label}</dd>
-					{/each}
-				</dl>
-			{/if}
-			{#if annotations || xyz}
-				<span class="sub-title">Sources</span>
-				<ul>
-					{#if annotations}
-						{#each annotations as annotation}
-							{#if annotation.annotation && annotation.label}
+<div class="toggle" style="--text-color: {$textColor}" class:toggle-move={!$panel}>
+	<button class="toggle-button" on:click={togglePanel}>
+		<body>
+			<svg
+				class="toggle-svg"
+				class:svg-move={!$panel}
+				aria-hidden="true"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+			>
+				<path
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="m9 5 7 7-7 7"
+				/>
+			</svg>
+		</body>
+	</button>
+</div>
+{#if $slide && $panel}
+	<div
+		class="panel-grid-container"
+		style="--text-color: {$textColor}"
+		transition:fly={{ delay: 0, duration: 200, x: flyX, y: flyY, opacity: 0.5 }}
+	>
+		<div class="content">
+			<div class="body">
+				<!-- <p class="heading">
+					{data.meta.heading}
+				</p> -->
+				{@html html}
+				{#if legend}
+					<span class="sub-title">Legend</span>
+					<dl class="legend">
+						{#each legend as item}
+							<dt>
+								<div
+									class="legend-item"
+									style="background: {item.fill && item['fill-opacity']
+										? hexToRGBA(item.fill, item['fill-opacity'])
+										: item.fill
+										? item.fill
+										: 'none'}; border-color: {item.stroke && item['stroke-opacity']
+										? hexToRGBA(item.stroke, item['stroke-opacity'])
+										: item.stroke
+										? item.stroke
+										: item.fill}; border-radius: {item.circle ? '50%' : 'unset'}"
+								/>
+							</dt>
+							<dd>{item.label}</dd>
+						{/each}
+						{#if annotations && $chapter === 'argumentation'}
+							<dt>
+								{@html gcpMarker}
+							</dt>
+							<dd>Ground Control Point</dd>
+						{/if}
+					</dl>
+				{/if}
+				{#if annotations || xyz}
+					<span class="sub-title">Sources</span>
+					<ul>
+						{#if annotations}
+							{#each annotations as annotation}
+								{#if annotation.annotation && annotation.label}
+									<li>
+										{annotation.label}
+										{#if annotation.attribution?.name && annotation.attribution?.url}
+											<a href={annotation.attribution.url}>{annotation.attribution.name}</a>
+										{/if}
+										<a
+											href={allmapsViewer +
+												$page.url.origin +
+												path +
+												'annotations/' +
+												annotation.annotation}>Open in Allmaps</a
+										>
+									</li>
+								{/if}
+							{/each}
+						{/if}
+						{#if xyz}
+							{#if xyz.label}
 								<li>
-									{annotation.label}
-									{#if annotation.attribution?.name && annotation.attribution?.url}
-										<a href={annotation.attribution.url}>{annotation.attribution.name}</a>
+									{xyz.label}
+									{#if xyz.attribution?.name && xyz.attribution?.url}
+										<a href={xyz.attribution.url}>{xyz.attribution.name}</a>
 									{/if}
-									<a
-										href={allmapsViewer +
-											$page.url.origin +
-											path +
-											'annotations/' +
-											annotation.annotation}>Open in Allmaps</a
-									>
 								</li>
 							{/if}
-						{/each}
-					{/if}
-					{#if xyz}
-						{#if xyz.label}
-							<li>
-								{xyz.label}
-								{#if xyz.attribution?.name && xyz.attribution?.url}
-									<a href={xyz.attribution.url}>{xyz.attribution.name}</a>
-								{/if}
-							</li>
 						{/if}
-					{/if}
-				</ul>
-			{/if}
+					</ul>
+				{/if}
+			</div>
 		</div>
 	</div>
-</div>
+{/if}
 
 <style>
+	.toggle {
+		grid-column: panel;
+		grid-row: map;
+		z-index: 4;
+		width: 2.4rem;
+		height: 5rem;
+		margin: auto -2.4rem;
+		border-radius: 1rem 0 0 1rem;
+		background: rgba(255, 255, 255, 0.9);
+	}
+	.toggle-button {
+		width: 100%;
+		height: 100%;
+		line-height: 0.4em;
+		background: none;
+		border: none;
+		border-radius: 1rem 0 0 1rem;
+		color: var(--text-color);
+		& svg {
+			width: 2rem;
+			height: 2rem;
+		}
+		&:hover {
+			background: rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			background: rgba(0, 0, 0, 0.2);
+		}
+	}
+	.toggle-move {
+		justify-self: end;
+		margin: auto 0rem;
+	}
+	.svg-move {
+		transform: rotate(0.5turn);
+	}
 	.panel-grid-container {
 		background-color: rgba(255, 255, 255, 0.9);
 		color: var(--text-color);
@@ -137,6 +222,21 @@
 	}
 	.body {
 		margin: 0rem 1rem;
+		& > :first-child {
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+		& > :last-child {
+			margin-bottom: 0 !important;
+			padding-bottom: 0 !important;
+		}
+		& a {
+			border-bottom: 1px solid var(--text-color);
+			color: var(--text-color);
+			&:hover {
+				border-bottom: none;
+			}
+		}
 	}
 	.sub-title {
 		text-transform: uppercase;
@@ -151,6 +251,9 @@
 		flex-basis: 10%;
 		padding: 5px 0px;
 		margin: 0;
+		& svg {
+			width: 16px;
+		}
 	}
 	dl.legend > dd {
 		flex-basis: 90%;
@@ -169,9 +272,28 @@
 	}
 	@media all and (max-width: 700px) {
 		.panel-grid-container {
-			grid-template-rows: 1 / 3;
 			border-radius: 1rem 1rem 0 0;
 			margin: 0.4rem 1rem 4rem 1rem;
+		}
+		.toggle {
+			align-self: start;
+			margin: -2rem auto 0;
+			height: 2.4rem;
+			width: 5rem;
+			border-radius: 1rem 1rem 0 0;
+		}
+		.toggle-button {
+			border-radius: 1rem 1rem 0 0;
+		}
+		.toggle-svg {
+			transform: rotate(0.25turn);
+		}
+		.toggle-move {
+			align-self: end;
+			margin: 0rem auto 5rem;
+		}
+		.svg-move {
+			transform: rotate(0.75turn);
 		}
 	}
 </style>

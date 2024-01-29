@@ -3,15 +3,22 @@
 	import { black } from '$lib/shared/stores/selectedSlide.js'
 	import Page from '../../routes/+page.svelte'
 	import { bars, close } from '$lib/shared/svgs.js'
+	import { selectedChapter as chapter } from '$lib/shared/stores/selectedSlide.js'
 	const toggleMenu = () => menu.toggle()
+	const goHome = () => {
+		menu.set(false)
+		location.hash = `#/${$chapter}`
+	}
 </script>
 
 <div class="header">
-	<div class="title">
-		<a href="#/" class:black={$black}><span class="hidden">The Berlage: </span>City Atlas</a>
+	<div>
+		<button class:black={$black} class="home-button" on:click={goHome}>
+			<body><span class="hidden">The Berlage: </span>City Atlas</body>
+		</button>
 	</div>
-	<div class:black={$black} class="menu">
-		<button on:click={toggleMenu}>
+	<div class="menu">
+		<button class:black={$black} class="menu-button" on:click={toggleMenu}>
 			<body>
 				{#if $menu}{@html close}{:else}{@html bars}{/if}
 			</body>
@@ -29,54 +36,57 @@
 		/* border-bottom: 1px solid lightgrey; */
 		z-index: 6;
 		color: white;
+		pointer-events: none;
 	}
-	.title {
-		float: left;
+
+	button {
+		background: none;
+		pointer-events: auto;
+		display: block;
+		border: none;
+		color: white;
+		border-radius: 0.2rem;
+		& svg {
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+		&:hover {
+			color: rgba(255, 255, 114);
+			background: rgba(0, 0, 0, 0.2);
+		}
+		&:active {
+			color: rgba(255, 255, 114);
+		}
 	}
+
+	.menu-button {
+		width: 2rem;
+		height: 2rem;
+		padding: 0;
+		margin: 0;
+		line-height: 0.4em;
+	}
+
+	.home-button {
+		height: 2rem;
+		padding: 0 0.25rem;
+		& body {
+			font-size: 1.2rem;
+		}
+	}
+
 	.menu {
 		width: 2rem;
 		height: 2rem;
 		position: absolute;
 		right: 1rem;
 		top: 1rem;
-		& button {
-			background: none;
-			display: block;
-			border: none;
-			color: white;
-			width: 2rem;
-			height: 2rem;
-			padding: 0;
-			margin: 0;
-			border-radius: 0.2rem;
-			line-height: 0.4em;
-			& svg {
-				height: 1.5rem;
-				width: 1.5rem;
-			}
-			&:hover {
-				color: rgba(255, 255, 114);
-				background: rgba(0, 0, 0, 0.2);
-			}
-			&:active {
-				color: rgba(255, 255, 114);
-			}
-		}
 	}
+
 	.black {
 		color: black;
-		& button {
-			color: black;
-		}
 	}
-	a {
-		color: white;
-		text-decoration: none;
-	}
-	a:hover {
-		color: rgba(255, 255, 114);
-		text-decoration: none;
-	}
+
 	@media all and (max-width: 700px) {
 		.hidden {
 			display: none;

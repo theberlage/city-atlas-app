@@ -4,14 +4,19 @@
 		selectedSlideShow as slideshow,
 		selectedSlideShowCount as count,
 		selectedSlideIndex as index,
+		selectedSlideData as data,
 		textColor,
 		overview
 	} from '$lib/shared/stores/selectedSlide.js'
-	import { panel } from '$lib/shared/stores/componentStates.js'
+	import { panel, menu, bear } from '$lib/shared/stores/componentStates.js'
 	import { next, prev } from '$lib/shared/svgs.js'
 	import { fly, slide as slideTransition, fade } from 'svelte/transition'
 
+	$: title = $data?.frontmatter.meta.heading
+
 	const togglePanel = () => panel.toggle()
+	const toggleMenu = () => menu.toggle()
+	const toggleBear = () => bear.toggle()
 
 	function goNext() {
 		if ($index < $count - 1) {
@@ -38,6 +43,8 @@
 	// right = 39
 	// left = 37
 	// esc = 27
+	// m = 77
+	// b = 66
 
 	function onKeyDown(e: any) {
 		switch (e.keyCode) {
@@ -50,8 +57,14 @@
 			case 39:
 				goNext()
 				break
+			case 77:
+				toggleMenu()
+				break
 			case 80:
 				togglePanel()
+				break
+			case 66:
+				toggleBear()
 				break
 		}
 	}
@@ -74,14 +87,10 @@
 				</button>
 			</div>
 		{:else}
-			<div class="grid-item start">Click or tap a location</div>
+			<div class="grid-item start">Select a location on the map</div>
 		{/if}
-		<div class:panel-overview={$overview} class="grid-item panel button">
-			<button on:click={togglePanel}>
-				<body>
-					{#if $panel}Hide{:else}Show{/if} description
-				</body>
-			</button>
+		<div class:panel-overview={$overview} class="grid-item panel title">
+			{title}
 		</div>
 	</div>
 </div>
@@ -101,7 +110,6 @@
 		display: grid;
 		grid-template-columns: [left] 4rem [center]1fr [right] 4rem;
 		grid-template-rows: [top] 1fr [bottom] 1fr;
-		font-size: 1.2rem;
 		border-radius: 1rem;
 		background-color: rgba(255, 255, 255, 0.9);
 		color: var(--text-color);
@@ -147,24 +155,25 @@
 	}
 	.count {
 		grid-column: center;
-		grid-row: top;
+		grid-row: bottom;
 		text-align: center;
 		margin: auto;
 		/* padding-top: 0.4rem; */
 	}
 	.panel {
+		font-size: 1.2rem;
 		grid-column: center;
-		grid-row: bottom;
+		grid-row: top;
 		text-align: center;
+		margin: auto;
 	}
 	.panel-overview {
-		& button {
-			border-radius: 0 0 1rem 1rem;
-		}
+		display: none;
 	}
 	.start {
+		font-size: 1.2rem;
 		grid-column: 1 / 4;
-		grid-row: top;
+		grid-row: 1 /3;
 		margin: auto;
 		padding: 0 1rem;
 	}
