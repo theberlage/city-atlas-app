@@ -3,12 +3,14 @@
 		selectedSlideData as slide,
 		selectedSlideShowCount as count,
 		selectedSlideIndex as index,
+		selectedChapter as chapter,
 		textColor
 	} from '$lib/shared/stores/selectedSlide.js'
 	import { panel } from '$lib/shared/stores/componentStates.js'
 	import { hexToRGBA } from '$lib/shared/utils.js'
 	import { page } from '$app/stores'
 	import { fly } from 'svelte/transition'
+	import { gcpMarker } from '$lib/shared/svgs.js'
 
 	let data: any
 	let path: string
@@ -93,11 +95,17 @@
 										? hexToRGBA(item.stroke, item['stroke-opacity'])
 										: item.stroke
 										? item.stroke
-										: item.fill}"
+										: item.fill}; border-radius: {item.circle ? '50%' : 'unset'}"
 								/>
 							</dt>
 							<dd>{item.label}</dd>
 						{/each}
+						{#if annotations && $chapter === 'argumentation'}
+							<dt>
+								{@html gcpMarker}
+							</dt>
+							<dd>Ground Control Point</dd>
+						{/if}
 					</dl>
 				{/if}
 				{#if annotations || xyz}
@@ -214,6 +222,14 @@
 	}
 	.body {
 		margin: 0rem 1rem;
+		& > :first-child {
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+		& > :last-child {
+			margin-bottom: 0 !important;
+			padding-bottom: 0 !important;
+		}
 		& a {
 			border-bottom: 1px solid var(--text-color);
 			color: var(--text-color);
@@ -235,6 +251,9 @@
 		flex-basis: 10%;
 		padding: 5px 0px;
 		margin: 0;
+		& svg {
+			width: 16px;
+		}
 	}
 	dl.legend > dd {
 		flex-basis: 90%;
