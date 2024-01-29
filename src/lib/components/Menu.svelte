@@ -3,16 +3,9 @@
 	import { menu, bear } from '$lib/shared/stores/componentStates.js'
 	import { fade } from 'svelte/transition'
 	import { onMount } from 'svelte'
-	import { marker2 } from '$lib/shared/svgs.js'
 
 	const toggleMenu = () => menu.toggle()
 
-	const svg = `<svg viewBox="0 0 543 670">
-  <g transform="translate(-87.000000, -61.000000)" fill="rgb(239,202,221)" fill-rule="nonzero" id="group_artwork">
-    <path d="M630,349.423392 L501.484742,349.423392 C552.059255,324.746502 586.903316,272.886945 586.903316,212.887083 C586.903316,129.002928 518.812625,61 434.817076,61 L130.647681,61 L130.647681,349.423392 L87,349.423392 L87,731 L630,731 L630,349.423392 Z M586,540.500769 C586,624.17226 517.798221,692 433.665636,692 L129,692 L129,389 L433.66409,389 C517.796675,389 586,456.829278 586,540.500769 Z" id="theberlage-logo"></path>
-  </g>
-</svg>
-`
 	// Eyeball animation https://codepen.io/GabEsu/pen/VdKjPE
 
 	let eyeball: SVGCircleElement | undefined
@@ -24,7 +17,7 @@
 	let centerX: number | undefined
 	let centerY: number | undefined
 	let angle: number
-	$: transform = `rotate(${angle}, 420, 200) translate(20)`
+	$: transform = `rotate(${angle ? angle : 0}, 114, 64) translate(4)`
 
 	function setPupil(event: MouseEvent) {
 		if (eyeball && pupil) {
@@ -54,52 +47,64 @@
 <div class="menu" transition:fade>
 	<div class="container">
 		<div class="logo">
-			<svg viewBox="0 0 544 671">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 235">
 				<g fill="rgb(252,217,213)" fill-rule="nonzero" id="group_artwork">
 					<path
 						id="body"
-						d="M347.2,288.9H415
-        c50.6-24.7,85.4-76.5,85.4-136.5c0-83.9-68.1-151.9-152.1-151.9H44.1v288.4H0.5v381.6h346.7l0-39H42.5v-303h304.7V288.9z"
+						d="M137.8,108c15.6-8.5,26.2-25,26.2-44c0-27.6-22.4-50-50-50H14v94H0v127h180V108H137.8z M114,221H14V121h100
+        c27.6,0,50,22.4,50,50S141.6,221,114,221z"
 					/>
-					<path
-						id="lower-jaw"
-						d="M499.5,480c0,83.7-68.2,151.5-152.3,151.5l0,39h196.3V479.7L499.5,480z"
-						transform="rotate(10 348 480)"
-					>
-						<!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform -->
-						<!-- <animateTransform
-							attributeName="transform"
-							attributeType="XML"
-							type="rotate"
-							from="0 348 480"
-							to="90 348 480"
-							dur="1s"
-							repeatCount="indefinite"
-						/> -->
-					</path>
-					<path
-						id="upper-jaw"
-						d="M543.5,479.7V288.9H347.2v39.6c84.1,0,152.3,67.8,152.3,151.5L543.5,479.7z"
-						transform="rotate(-5 348 480)"
-					>
-						<!-- <animateTransform
-							attributeName="transform"
-							attributeType="XML"
-							type="rotate"
-							from="0 348 480"
-							to="-90 348 480"
-							dur="1s"
-							repeatCount="indefinite"
-						/> -->
-					</path>
+				</g>
+				<g stroke="rgb(119, 63, 63)" fill="none" stroke-width="6">
+					<circle
+						class="circle-transform"
+						cx="127"
+						cy="64"
+						r="27"
+						stroke-dasharray="4.71238898038469"
+						stroke-dashoffset="4.71238898038469"
+					/>
+					<circle
+						class="circle-transform"
+						cx="127"
+						cy="64"
+						r="21"
+						stroke-dasharray="3.6651914291880923"
+						stroke-dashoffset="0"
+					/>
+					<circle
+						class="circle-transform"
+						cx="127"
+						cy="64"
+						r="15"
+						stroke-dasharray="2.617993877991494"
+						stroke-dashoffset="2.617993877991494"
+					/>
+					<circle
+						class="circle-transform"
+						cx="127"
+						cy="64"
+						r="9"
+						stroke-dasharray="1.5707963267948966"
+						stroke-dashoffset="0"
+						stroke-width="6"
+					/>
+					<circle
+						class="circle-transform"
+						cx="127"
+						cy="64"
+						r="3"
+						stroke-dasharray="0.5235987755982988"
+						stroke-dashoffset="0.5235987755982988"
+					/>
 				</g>
 				{#if $bear}
 					<g>
-						<circle cx="420" cy="200" r="50" fill="white" class="eyeball" bind:this={eyeball} />
+						<circle cx="114" cy="64" r="10" fill="white" class="eyeball" bind:this={eyeball} />
 						<circle
-							cx="420"
-							cy="200"
-							r="30"
+							cx="185"
+							cy="64"
+							r="6"
 							fill="#0D0D20"
 							class="pupil"
 							bind:this={pupil}
@@ -120,7 +125,7 @@
 							>{chapter.charAt(0).toUpperCase() + chapter.slice(1)}</a
 						>
 					</li>
-					<!-- <ul>
+					<ul>
 						{#each [...$slideData.get(chapter).keys()].slice(1) as slideshow}
 							<li>
 								<a on:click={toggleMenu} href="#/{chapter}/{slideshow}/1"
@@ -128,7 +133,7 @@
 								>
 							</li>
 						{/each}
-					</ul> -->
+					</ul>
 				{/each}
 			</ul>
 		</div>
@@ -169,9 +174,9 @@
 	.logo {
 		grid-column: 1 / 2;
 		grid-row: 1 / 3;
-		margin: auto;
-		width: 80%;
-		height: 80%;
+		margin-top: 0;
+		/* width: 100%; */
+		height: 95%;
 		& svg {
 			width: 100%;
 			height: 100%;
@@ -192,6 +197,7 @@
 		font-size: 1.2rem;
 		max-width: 700px;
 		max-height: 100%;
+		margin: auto;
 	}
 	ul {
 		margin-left: 0;
