@@ -6,6 +6,7 @@
 	import { selectedChapter as chapter } from '$lib/shared/stores/selectedSlide.js'
 	const toggleMenu = () => menu.toggle()
 	const goHome = () => {
+		menu.set(false)
 		location.hash = `#/${$chapter}`
 	}
 </script>

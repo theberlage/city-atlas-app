@@ -10,7 +10,8 @@
 		vectorLayers as newVectorSource,
 		black,
 		textColor,
-		overview
+		overview,
+		selectedChapter as chapter
 	} from '$lib/shared/stores/selectedSlide.js'
 	import { panel } from '$lib/shared/stores/componentStates.js'
 	import { close } from '$lib/shared/svgs.js'
@@ -84,6 +85,8 @@
 	let overlayBoolean: boolean = false
 	let overlayElement: HTMLElement
 	let overlayContents: any
+
+	$: about = $chapter === 'about' ? true : false
 
 	const addControls = () => {
 		const collection = new Collection()
@@ -476,15 +479,32 @@
 					{#if overlayContents.href}
 						<p>{overlayContents.label}</p>
 						<p>
-							<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
-								{#if $overview}
-									Start slideshow
-								{:else if overlayContents.href.includes('argumentation')}
-									Go to slide
-								{:else if overlayContents.href.includes('documentation')}
-									Open in Documentation
-								{/if}
-							</a>
+							{#if about}
+								<p>
+									<a
+										class="overlay-link"
+										on:click={closeOverlay}
+										href={overlayContents.href.replace('argumentation', 'documentation')}
+									>
+										Open in Documentation
+									</a>
+								</p>
+								<p>
+									<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
+										Open in Argumentation
+									</a>
+								</p>
+							{:else}
+								<a class="overlay-link" on:click={closeOverlay} href={overlayContents.href}>
+									{#if $overview}
+										Start slideshow
+									{:else if overlayContents.href.includes('argumentation')}
+										Go to slide
+									{:else if overlayContents.href.includes('documentation')}
+										Open in Documentation
+									{/if}
+								</a>
+							{/if}
 						</p>
 					{:else}
 						<p>{overlayContents.label}</p>
