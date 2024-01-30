@@ -80,7 +80,7 @@
         },
         {
             "type": "Feature",
-            "properties": { "label": "Infill of Markengracht in the 1960s" },
+            "properties": { "label": "Infill of Markengracht in the 1960s", "href": "#/documentation/uilenburg/13" },
             "geometry": {
                 "type": "Point",
                 "coordinates": [
