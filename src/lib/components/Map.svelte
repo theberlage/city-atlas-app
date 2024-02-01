@@ -261,6 +261,8 @@
 			if (properties.opacity !== undefined) {
 				let opacity = properties.opacity / 100
 				warpedMapLayer.setMapOpacity(id, opacity)
+			} else {
+				warpedMapLayer.resetMapOpacity(id)
 			}
 			if (properties.removeBackground?.color) {
 				let hexColor = properties.removeBackground.color
@@ -271,12 +273,18 @@
 					? properties.removeBackground.hardness / 100
 					: 0.7
 				warpedMapLayer.setMapRemoveBackground(id, { hexColor, threshold, hardness })
+			} else {
+				warpedMapLayer.resetMapRemoveBackground(id)
 			}
 			if (properties.saturation !== undefined) {
 				warpedMapLayer.setMapSaturation(id, properties.saturation / 100)
+			} else {
+				warpedMapLayer.resetMapSaturation(id)
 			}
 			if (properties.colorize) {
 				warpedMapLayer.setMapColorize(id, properties.colorize)
+			} else {
+				warpedMapLayer.resetMapColorize(id)
 			}
 		}
 		console.log(`Maps: ${removedCount} removed, ${addedCount} added, ${existingCount} existing`)
