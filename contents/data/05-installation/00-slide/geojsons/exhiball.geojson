@@ -1,1 +1,243 @@
-
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {				
+          "label": "Allmaps Arcade",
+          "href": "https://arcade.allmaps.org",
+          "link-title": "Play me"},
+          "geometry": {
+          "coordinates": [
+            [
+              [
+                4.370956942029181,
+                52.006335152096284
+              ],
+              [
+                4.370959506888028,
+                52.00632515264056
+              ],
+              [
+                4.3709701083040216,
+                52.00632388955131
+              ],
+              [
+                4.370972502172208,
+                52.00632999448223
+              ],
+              [
+                4.370968911369459,
+                52.00634367794575
+              ],
+              [
+                4.370961387784348,
+                52.00634462526264
+              ],
+              [
+                4.370959164906765,
+                52.00633883610553
+              ],
+              [
+                4.370956942029181,
+                52.006335152096284
+              ]
+            ]
+          ],
+          "type": "Polygon"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "label": "Uilenburg Argumentation Drawings", "href": "#/argumentation/uilenburg",
+        "link-title": "Go to slideshow" },
+        "geometry": {
+          "coordinates": [
+            [
+              [
+                4.370685173937289,
+                52.00616337876414
+              ],
+              [
+                4.370706277565176,
+                52.00617862428254
+              ],
+              [
+                4.370702963773056,
+                52.006190434187346
+              ],
+              [
+                4.3706823833749695,
+                52.006175188673296
+              ],
+              [
+                4.370685173937289,
+                52.00616337876414
+              ]
+            ]
+          ],
+          "type": "Polygon"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "label": "Vijzelstraat Argumentation Drawings", "href": "#/argumentation/vijzelstraat",
+        "link-title": "Go to slideshow" },
+        "geometry": {
+          "coordinates": [
+            [
+              [
+                4.370702963773056,
+                52.006190648912906
+              ],
+              [
+                4.370706277547896,
+                52.00617873163844
+              ],
+              [
+                4.370727904406721,
+                52.00619483605357
+              ],
+              [
+                4.37072493943333,
+                52.00620686067961
+              ],
+              [
+                4.370702963773056,
+                52.006190648912906
+              ]
+            ]
+          ],
+          "type": "Polygon"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "label": "Helmersbuurt Argumentation Drawings", "href": "#/argumentation/helmersbuurt",
+        "link-title": "Go to slideshow" },
+        "geometry": {
+            "coordinates": [
+                [
+                  [
+                    4.370789456292471,
+                    52.00625532642485
+                  ],
+                  [
+                    4.370792705114042,
+                    52.00624322179905
+                  ],
+                  [
+                    4.370813394974533,
+                    52.00625858941055
+                  ],
+                  [
+                    4.370809975162672,
+                    52.00627016774462
+                  ],
+                  [
+                    4.370789456292471,
+                    52.00625532642485
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "label": "Houthavens Argumentation Drawings", "href": "#/argumentation/houthavens",
+        "link-title": "Go to slideshow" },
+        "geometry": {
+            "coordinates": [
+                [
+                  [
+                    4.370810034527068,
+                    52.00627015025154
+                  ],
+                  [
+                    4.370813283347445,
+                    52.006258677174884
+                  ],
+                  [
+                    4.370835170141731,
+                    52.006274781584096
+                  ],
+                  [
+                    4.3708320923117014,
+                    52.006286359914014
+                  ],
+                  [
+                    4.370810034527068,
+                    52.00627015025154
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "label": "Slotermeer Argumentation Drawings", "href": "#/argumentation/slotermeer",
+        "link-title": "Go to slideshow" },
+        "geometry": {
+            "coordinates": [
+                [
+                  [
+                    4.370894071322709,
+                    52.0063326784784
+                  ],
+                  [
+                    4.370896978162364,
+                    52.00632110016045
+                  ],
+                  [
+                    4.370917668022912,
+                    52.00633646774517
+                  ],
+                  [
+                    4.370914419201455,
+                    52.00634783554429
+                  ],
+                  [
+                    4.370894071322709,
+                    52.0063326784784
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "label": "Bijlmermeer Argumentation Drawings", "href": "#/argumentation/bijlmermeer",
+        "link-title": "Go to slideshow" },
+        "geometry": {
+            "coordinates": [
+                [
+                  [
+                    4.37091456000195,
+                    52.00634781696195
+                  ],
+                  [
+                    4.370917808823435,
+                    52.00633644916283
+                  ],
+                  [
+                    4.370939353636999,
+                    52.00635223777161
+                  ],
+                  [
+                    4.370936275805889,
+                    52.00636402659626
+                  ],
+                  [
+                    4.37091456000195,
+                    52.00634781696195
+                  ]
+                ]
+              ],
+              "type": "Polygon"
+        }
+      }
+    ]
+  }
